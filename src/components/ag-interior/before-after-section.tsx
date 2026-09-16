@@ -45,11 +45,7 @@ export function BeforeAfterSection() {
   }, []);
 
   return (
-    <section className="py-16 sm:py-24 lg:py-28 bg-[#0E0F0A] text-white relative overflow-hidden">
-      
-      {/* Delicate golden ambient glow */}
-      <div className="absolute top-1/3 -left-20 w-80 h-80 bg-[#EDB21F]/10 rounded-full blur-3xl pointer-events-none" />
-
+    <section className="py-16 sm:py-24 lg:py-28 bg-[#0B2A43] text-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
@@ -57,28 +53,28 @@ export function BeforeAfterSection() {
           <div data-animate="fade-up" className="lg:col-span-4 xl:col-span-4">
             
             {/* Kicker */}
-            <div className="flex items-center gap-2 mb-3 sm:mb-4">
-              <span className="h-px w-6 bg-[#EDB21F]" />
-              <span className="text-[11px] font-sans uppercase tracking-[0.24em] text-[#EDB21F] font-semibold">
-                Living Transformation
+            <div className="flex items-center gap-2.5 mb-3 sm:mb-4">
+              <span className="h-px w-7 bg-[#1C6BAE]" />
+              <span className="text-[11px] font-sans uppercase tracking-[0.24em] text-[#1C6BAE] font-semibold">
+                Spatial Transformation
               </span>
             </div>
 
             {/* Headline */}
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-[42px] leading-[1.16] font-medium tracking-tight mb-4 sm:mb-5 text-[#FDFBF7]">
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-[42px] leading-[1.16] font-medium tracking-tight mb-4 sm:mb-5 text-white">
               See the Transformation <br />
               Before It Happens.
             </h2>
 
             {/* Subtitle */}
-            <p className="font-sans text-[#DAD6CB] text-sm sm:text-base leading-relaxed mb-6 sm:mb-8 font-light">
-              Move the slider to see how we turn ordinary spaces into extraordinary living experiences.
+            <p className="font-sans text-[#D9E3EA] text-sm sm:text-base leading-relaxed mb-6 sm:mb-8 font-normal">
+              Slide horizontally to witness how architectural planning and bespoke craftsmanship transform bare structures into serene living environments.
             </p>
 
-            {/* Micro Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/15 text-[10px] sm:text-[11px] font-sans tracking-widest text-[#FDFBF7] uppercase">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#EDB21F] animate-pulse" />
-              <span>Interactive 3D Craft</span>
+            {/* Architectural Badge */}
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-white/10 border border-white/15 text-[10px] sm:text-[11px] font-sans tracking-widest text-white uppercase">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#1C6BAE] animate-pulse" />
+              <span>Interactive 3D Study</span>
             </div>
 
           </div>
@@ -86,10 +82,10 @@ export function BeforeAfterSection() {
           {/* Right Column: Interactive Slider Container */}
           <div data-animate="fade-up" className="lg:col-span-8 xl:col-span-8 relative">
             
-            {/* Calligraphy Headline Accent - Responsively Positioned */}
+            {/* Subtitle Accent */}
             <div className="flex justify-end mb-3 sm:mb-4 pr-2 select-none pointer-events-none">
-              <span className="font-script text-2xl sm:text-4xl text-[#EDB21F]/95 tracking-wide drop-shadow">
-                Same Space, Different Story
+              <span className="text-xs font-sans uppercase tracking-[0.24em] text-[#1C6BAE] font-medium">
+                Concept to Execution — Interactive Comparison
               </span>
             </div>
 
@@ -104,7 +100,7 @@ export function BeforeAfterSection() {
               onMouseMove={handleMouseMove}
               onTouchStart={(e) => updatePosition(e.touches[0].clientX)}
               onTouchMove={handleTouchMove}
-              className="relative w-full aspect-[16/9] sm:aspect-[16/7] md:aspect-[16/6.5] rounded-2xl overflow-hidden shadow-2xl select-none cursor-ew-resize border border-white/15 bg-[#0E0F0A]"
+              className="relative w-full aspect-[16/9] sm:aspect-[16/7] md:aspect-[16/6.5] rounded overflow-hidden shadow-2xl select-none cursor-ew-resize border border-white/15 bg-[#111111]"
               style={{ touchAction: "none" }}
             >
               {/* "AFTER" Image (Full background layer) */}
@@ -118,8 +114,8 @@ export function BeforeAfterSection() {
                   priority
                 />
                 {/* AFTER Pill Label */}
-                <div className="absolute bottom-4 sm:bottom-5 right-4 sm:right-5 z-10 px-3 py-1 rounded-full bg-[#0E0F0A]/90 backdrop-blur-md border border-white/20 text-[10px] font-sans font-semibold tracking-widest text-[#EDB21F] uppercase">
-                  AFTER
+                <div className="absolute bottom-4 sm:bottom-5 right-4 sm:right-5 z-10 px-3 py-1 rounded bg-[#111111]/90 backdrop-blur-md border border-white/20 text-[10px] font-sans font-semibold tracking-widest text-[#1C6BAE] uppercase">
+                  AFTER — ORGO RESIDENCE
                 </div>
               </div>
 
@@ -137,8 +133,8 @@ export function BeforeAfterSection() {
                     sizes="(max-width: 1024px) 100vw, 850px"
                   />
                   {/* BEFORE Pill Label */}
-                  <div className="absolute bottom-4 sm:bottom-5 left-4 sm:left-5 z-10 px-3 py-1 rounded-full bg-[#0E0F0A]/90 backdrop-blur-md border border-white/20 text-[10px] font-sans font-semibold tracking-widest text-[#DAD6CB] uppercase">
-                    BEFORE
+                  <div className="absolute bottom-4 sm:bottom-5 left-4 sm:left-5 z-10 px-3 py-1 rounded bg-[#111111]/90 backdrop-blur-md border border-white/20 text-[10px] font-sans font-semibold tracking-widest text-[#D9E3EA] uppercase">
+                    BEFORE — RAW SITE
                   </div>
                 </div>
               </div>
@@ -149,9 +145,9 @@ export function BeforeAfterSection() {
                 style={{ left: `${sliderPosition}%` }}
               >
                 {/* Center Circle Button with Left/Right Arrows */}
-                <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white text-[#0E0F0A] shadow-2xl flex items-center justify-center border-2 border-[#EDB21F] transform transition-transform hover:scale-110 active:scale-95">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white text-[#111111] shadow-2xl flex items-center justify-center border-2 border-[#1C6BAE] transform transition-transform hover:scale-110 active:scale-95">
                   <svg
-                    className="w-4 h-4 sm:w-5 sm:h-5 text-[#0E0F0A]"
+                    className="w-4 h-4 text-[#111111]"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -169,9 +165,9 @@ export function BeforeAfterSection() {
             </div>
 
             {/* Bottom cue for touch devices */}
-            <div className="mt-3 flex items-center justify-between text-[11px] font-sans text-[#77766F]">
-              <span>← Drag slider horizontally to compare →</span>
-              <span className="text-[#EDB21F] font-medium">{Math.round(sliderPosition)}% Transformed</span>
+            <div className="mt-3 flex items-center justify-between text-[11px] font-sans text-[#D9E3EA]">
+              <span>← Drag divider horizontally to compare spatial states →</span>
+              <span className="text-[#1C6BAE] font-medium">{Math.round(sliderPosition)}% Transformed</span>
             </div>
 
           </div>

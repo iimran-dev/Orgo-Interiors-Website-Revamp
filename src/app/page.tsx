@@ -27,22 +27,22 @@ export default function Home() {
   const handleCloseVideo = () => setVideoOpen(false);
 
   return (
-    <div className="flex min-h-screen flex-col bg-[#FDFBF7] text-[#0E0F0A] antialiased selection:bg-[#EDB21F] selection:text-[#0E0F0A] overflow-x-hidden w-full">
+    <div className="flex min-h-screen flex-col bg-white text-[#111111] antialiased selection:bg-[#1C6BAE] selection:text-white overflow-x-hidden w-full">
       {/* 1. Header & Navigation */}
       <Navbar onOpenConsultation={handleOpenConsultation} />
 
       <MotionWrapper>
         <main className="flex-1">
-          {/* 2. Hero Section with Arched Living Showcase */}
+          {/* 2. Hero Section with Architectural Living Showcase */}
           <Hero
             onOpenConsultation={handleOpenConsultation}
             onOpenVideo={handleOpenVideo}
           />
 
-          {/* 3. 4-Column Trust Stats Bar */}
+          {/* 3. 4-Column Architectural Trust Stats Bar */}
           <StatsBar />
 
-          {/* 4. About Honey Craft Interior with Arched Dining Room & Badges */}
+          {/* 4. About ORGO Interiors with Architectural Dining Atelier */}
           <AboutSection />
 
           {/* 5. Complete Interior Solutions (4 Service Cards) */}

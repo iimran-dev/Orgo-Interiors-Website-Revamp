@@ -31,7 +31,7 @@ export function Hero({ onOpenConsultation, onOpenVideo }: HeroProps) {
   const wallTextRef = useRef<HTMLDivElement>(null);
   const pillRef = useRef<HTMLDivElement>(null);
 
-  const heroImage = getAssetUrl("/images/hero-living-room.jpg");
+  const heroImage = "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=85&w=1600&auto=format&fit=crop";
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -70,7 +70,7 @@ export function Hero({ onOpenConsultation, onOpenVideo }: HeroProps) {
     <section
       ref={heroRef}
       id="hero"
-      className="relative min-h-screen pt-24 lg:pt-0 bg-[#FDFBF7] text-[#0E0F0A] overflow-hidden flex flex-col lg:flex-row items-stretch"
+      className="relative min-h-screen pt-24 lg:pt-0 bg-[#F7F8F6] text-[#111111] overflow-hidden flex flex-col lg:flex-row items-stretch"
     >
       {/* ================= LEFT EDITORIAL COLUMN ================= */}
       <div className="w-full lg:w-[53%] flex flex-col justify-between pt-12 sm:pt-20 lg:pt-32 pb-12 sm:pb-16 px-6 sm:px-10 lg:pl-12 lg:pr-6 xl:pl-20 xl:pr-10 z-10">
@@ -82,80 +82,76 @@ export function Hero({ onOpenConsultation, onOpenVideo }: HeroProps) {
         <div className="max-w-xl">
           {/* Kicker / Subhead */}
           <div ref={kickerRef} className="flex items-center gap-2.5 mb-5">
-            <span className="h-[1.5px] w-6 bg-[#EDB21F]" />
-            <span className="text-[11px] sm:text-xs font-sans uppercase tracking-[0.24em] text-[#EDB21F] font-semibold">
-              Interiors That Feel Like Home
+            <span className="h-[1.5px] w-7 bg-[#1C6BAE]" />
+            <span className="text-[11px] sm:text-xs font-sans uppercase tracking-[0.24em] text-[#1C6BAE] font-semibold">
+              Architectural Interiors & Design
             </span>
           </div>
 
           {/* Main Display Headline */}
-          <h1 ref={headlineRef} className="font-display text-4xl sm:text-5xl lg:text-[56px] xl:text-[66px] leading-[1.08] text-[#0E0F0A] font-medium tracking-tight mb-6">
+          <h1 ref={headlineRef} className="font-display text-4xl sm:text-5xl lg:text-[56px] xl:text-[66px] leading-[1.08] text-[#111111] font-medium tracking-tight mb-6">
             Design <br />
             Beyond Spaces. <br />
-            <span className="italic font-normal text-[#EDB21F] drop-shadow-sm">
-              For a Better You.
+            <span className="italic font-normal text-[#1C6BAE]">
+              Architecture for Living.
             </span>
           </h1>
 
           {/* Subtitle Description */}
-          <p ref={paraRef} className="font-sans text-sm sm:text-base lg:text-[17px] text-[#77766F] leading-relaxed mb-8 sm:mb-10 font-light max-w-lg">
-            Thoughtfully designed residential and commercial interiors that blend aesthetics, functionality and your unique lifestyle.
+          <p ref={paraRef} className="font-sans text-sm sm:text-base lg:text-[17px] text-[#5F6368] leading-relaxed mb-8 sm:mb-10 font-normal max-w-lg">
+            Thoughtfully engineered residential and commercial environments blending architectural rigor, timeless materiality, and bespoke craftsmanship.
           </p>
 
-          {/* CTA Buttons Row */}
-          <div ref={buttonsRef} className="flex flex-wrap items-center gap-4 sm:gap-6 mb-10">
-            {/* Primary Button: 30% Near Black with 10% Honey Gold icon */}
+          {/* CTA Buttons Row: Architectural Moderate Radius */}
+          <div ref={buttonsRef} className="flex flex-wrap items-center gap-4 sm:gap-5 mb-10">
+            {/* Primary CTA: Background #1C6BAE, Text #FFFFFF, Hover #124B78 */}
             <Link
               href="#projects"
-              className="group relative inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-[#0E0F0A] hover:bg-[#1C1E14] text-[#FDFBF7] text-xs sm:text-sm font-semibold tracking-wider uppercase shadow-md hover:shadow-lg transition-all duration-300 active:scale-[0.98] overflow-hidden border border-[#DAD6CB]/30"
+              className="group relative inline-flex items-center gap-2.5 px-7 py-3.5 rounded bg-[#1C6BAE] hover:bg-[#124B78] text-white text-xs sm:text-sm font-medium tracking-wider uppercase shadow-sm transition-all duration-300 active:scale-[0.98] overflow-hidden"
             >
-              <span>Explore Our Work</span>
-              <ArrowRight className="w-4 h-4 ml-0.5 text-[#EDB21F] transition-transform duration-300 group-hover:translate-x-1" />
+              <span>Explore Our Portfolio</span>
+              <ArrowRight className="w-4 h-4 ml-0.5 text-white transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
 
-            {/* Video Play Trigger */}
+            {/* Secondary CTA: 1px solid #111111 */}
             <button
               onClick={onOpenVideo}
-              className="group inline-flex items-center gap-3 text-xs sm:text-sm font-sans font-medium text-[#0E0F0A] hover:text-[#EDB21F] transition-colors py-1"
-              aria-label="Watch Honey Craft Interior Story Video"
+              className="group inline-flex items-center gap-3 px-5 py-3 rounded border border-[#111111] bg-transparent text-[#111111] hover:bg-[#111111] hover:text-white transition-all duration-300 text-xs sm:text-sm font-sans font-medium"
+              aria-label="Watch ORGO Interiors Atelier Story Video"
             >
-              <div className="w-11 h-11 rounded-full border border-[#DAD6CB] flex items-center justify-center bg-white shadow-sm group-hover:border-[#EDB21F] group-hover:bg-[#F8E7B0]/20 group-hover:scale-105 group-hover:shadow-md transition-all duration-300">
-                <Play className="w-4 h-4 text-[#0E0F0A] fill-[#0E0F0A] ml-0.5 group-hover:text-[#EDB21F] group-hover:fill-[#EDB21F] transition-colors" />
+              <div className="w-6 h-6 rounded-full flex items-center justify-center bg-[#1C6BAE] text-white group-hover:bg-white group-hover:text-[#111111] transition-colors">
+                <Play className="w-2.5 h-2.5 fill-current ml-0.5" />
               </div>
-              <div className="text-left">
-                <span className="block font-semibold text-[#0E0F0A] leading-tight group-hover:text-[#EDB21F] transition-colors">Watch Our Story</span>
-                <span className="block text-[11px] text-[#77766F] font-normal">2 min</span>
-              </div>
+              <span>Watch Atelier Story</span>
             </button>
           </div>
         </div>
 
         {/* Bottom Rail: Pagination Indicators & Scroll Cue */}
-        <div className="pt-6 border-t border-[#DAD6CB] flex items-center justify-between max-w-xl">
+        <div className="pt-6 border-t border-[#E5E7E9] flex items-center justify-between max-w-xl">
           {/* Step numbers: 01, 02, 03 */}
-          <div className="flex items-center gap-5 text-xs font-sans tracking-widest text-[#77766F]">
+          <div className="flex items-center gap-5 text-xs font-sans tracking-widest text-[#5F6368]">
             {["01", "02", "03"].map((step) => (
               <button
                 key={step}
                 onClick={() => setActiveStep(step)}
                 className={`transition-all duration-300 ${
                   activeStep === step
-                    ? "text-[#EDB21F] font-bold scale-110"
-                    : "hover:text-[#0E0F0A]"
+                    ? "text-[#1C6BAE] font-bold scale-110"
+                    : "hover:text-[#111111]"
                 }`}
               >
                 {step}
               </button>
             ))}
-            <span className="w-2 h-2 rounded-full border border-[#EDB21F] inline-block" />
-            <span className="hover:text-[#0E0F0A] cursor-pointer">0</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-[#1C6BAE] inline-block" />
           </div>
 
           {/* Scroll Cue */}
-          <div className="flex items-center gap-2.5 text-[10px] font-sans uppercase tracking-[0.22em] text-[#77766F]">
-            <span className="font-semibold text-[#0E0F0A]">SCROLL</span>
-            <span className="text-[#EDB21F] lowercase tracking-normal">to explore</span>
-            <div className="h-5 w-[1.5px] bg-[#EDB21F] animate-pulse ml-0.5" />
+          <div className="flex items-center gap-2.5 text-[10px] font-sans uppercase tracking-[0.22em] text-[#5F6368]">
+            <span className="font-semibold text-[#111111]">SCROLL</span>
+            <span className="text-[#1C6BAE] lowercase tracking-normal">to explore</span>
+            <div className="h-5 w-[1.5px] bg-[#1C6BAE] animate-pulse ml-0.5" />
           </div>
         </div>
 
@@ -164,17 +160,17 @@ export function Hero({ onOpenConsultation, onOpenVideo }: HeroProps) {
       {/* ================= RIGHT ARCHITECTURAL LIVING ROOM COLUMN ================= */}
       <div className="w-full lg:w-[47%] relative min-h-[480px] sm:min-h-[580px] lg:min-h-full flex items-stretch overflow-hidden">
         
-        {/* Grand Sweeping Golden Arch Container */}
+        {/* Grand Sweeping Architectural Frame */}
         <div
           ref={archRef}
-          className="relative w-full h-full lg:rounded-tl-[380px] overflow-hidden border-t-2 lg:border-t-0 lg:border-l-4 border-[#EDB21F] shadow-2xl bg-[#F3EFE7]"
+          className="relative w-full h-full lg:rounded-tl-[320px] overflow-hidden border-t-2 lg:border-t-0 lg:border-l border-[#E5E7E9] shadow-xl bg-white"
         >
           
           {/* Parallax Image Wrapper */}
           <div ref={imageRef} className="absolute -top-10 -bottom-10 inset-x-0 w-full h-[115%]">
             <Image
               src={heroImage}
-              alt="Honey Craft Interior Luxury Living Room Showcase"
+              alt="ORGO Interiors Luxury Living Architecture Showcase"
               fill
               priority
               className="object-cover object-center scale-100 lg:scale-[1.02] hover:scale-105 transition-transform duration-1000 ease-out"
@@ -191,21 +187,20 @@ export function Hero({ onOpenConsultation, onOpenVideo }: HeroProps) {
             className="absolute top-44 sm:top-52 lg:top-64 xl:top-72 right-6 sm:right-10 z-20 pointer-events-none select-none text-right"
           >
             <div className="flex flex-col space-y-1 text-xs sm:text-[13px] font-sans font-semibold tracking-[0.26em] text-white/95 uppercase drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
-              <span>SPACES</span>
-              <span>PEOPLE</span>
-              <span>LOVE</span>
-              <span className="text-[#F8E7B0]">LIVING IN</span>
+              <span>TIMELESS</span>
+              <span>ARCHITECTURAL</span>
+              <span className="text-[#1C6BAE] bg-white/90 px-1.5 py-0.5 rounded-sm">INTERIORS</span>
             </div>
           </div>
 
           {/* Category Selector Pill (Bottom-Right) */}
           <div ref={pillRef} className="absolute bottom-6 sm:bottom-8 right-6 sm:right-10 z-20">
-            <div className="bg-[#0E0F0A]/90 backdrop-blur-md text-white px-5 py-2.5 rounded-full border border-white/15 shadow-2xl flex items-center gap-3 sm:gap-4 text-xs font-sans tracking-wide">
+            <div className="bg-[#111111]/90 backdrop-blur-md text-white px-5 py-2.5 rounded border border-white/15 shadow-xl flex items-center gap-3 sm:gap-4 text-xs font-sans tracking-wide">
               <button
                 onClick={() => setActiveTab("residential")}
                 className={`transition-colors duration-200 ${
                   activeTab === "residential"
-                    ? "text-[#EDB21F] font-semibold"
+                    ? "text-[#1C6BAE] font-semibold"
                     : "text-white/70 hover:text-white"
                 }`}
               >
@@ -216,7 +211,7 @@ export function Hero({ onOpenConsultation, onOpenVideo }: HeroProps) {
                 onClick={() => setActiveTab("commercial")}
                 className={`transition-colors duration-200 ${
                   activeTab === "commercial"
-                    ? "text-[#EDB21F] font-semibold"
+                    ? "text-[#1C6BAE] font-semibold"
                     : "text-white/70 hover:text-white"
                 }`}
               >
@@ -227,11 +222,11 @@ export function Hero({ onOpenConsultation, onOpenVideo }: HeroProps) {
                 onClick={() => setActiveTab("turnkey")}
                 className={`transition-colors duration-200 ${
                   activeTab === "turnkey"
-                    ? "text-[#EDB21F] font-semibold"
+                    ? "text-[#1C6BAE] font-semibold"
                     : "text-white/70 hover:text-white"
                 }`}
               >
-                Turnkey Interiors
+                Turnkey Atelier
               </button>
             </div>
           </div>

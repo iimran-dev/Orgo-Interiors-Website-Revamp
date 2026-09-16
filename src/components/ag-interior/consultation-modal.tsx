@@ -39,46 +39,46 @@ export function ConsultationModal({ isOpen, onClose }: ConsultationModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && handleReset()}>
-      <DialogContent className="max-w-lg max-h-[90vh] overflow-y-auto bg-[#FDFBF7] border-[#DAD6CB] text-[#0E0F0A] p-0 shadow-2xl rounded-2xl">
+      <DialogContent className="max-w-lg max-h-[90vh] overflow-y-auto bg-white border border-[#E5E7E9] text-[#111111] p-0 shadow-2xl rounded">
         <div className="relative p-5 sm:p-8">
           {/* Header */}
           <DialogHeader className="mb-6">
             <div className="flex items-center gap-2 mb-2">
-              <span className="h-px w-6 bg-[#EDB21F]" />
-              <span className="text-[11px] font-sans uppercase tracking-[0.2em] text-[#EDB21F] font-semibold">
-                Honey Craft Interior Experience
+              <span className="h-px w-6 bg-[#1C6BAE]" />
+              <span className="text-[11px] font-sans uppercase tracking-[0.24em] text-[#1C6BAE] font-semibold">
+                ORGO Interiors Experience
               </span>
             </div>
-            <DialogTitle className="font-display text-2xl sm:text-3xl text-[#0E0F0A] font-medium tracking-tight">
-              Book a Free Consultation
+            <DialogTitle className="font-display text-2xl sm:text-3xl text-[#111111] font-medium tracking-tight">
+              Book an Atelier Consultation
             </DialogTitle>
-            <DialogDescription className="text-sm text-[#77766F] font-sans mt-1">
-              Discuss your space, requirements, and budget with our senior design architects.
+            <DialogDescription className="text-sm text-[#5F6368] font-sans mt-1">
+              Discuss your spatial vision, architectural requirements, and material preferences with our design team.
             </DialogDescription>
           </DialogHeader>
 
           {submitted ? (
             <div className="py-8 text-center space-y-4">
-              <div className="w-16 h-16 rounded-full bg-[#EDB21F]/15 text-[#EDB21F] flex items-center justify-center mx-auto">
+              <div className="w-16 h-16 rounded bg-[#EAF3F9] text-[#1C6BAE] flex items-center justify-center mx-auto">
                 <CheckCircle2 className="w-9 h-9" />
               </div>
-              <h3 className="font-display text-2xl font-medium text-[#0E0F0A]">
+              <h3 className="font-display text-2xl font-medium text-[#111111]">
                 Thank You, {formData.name || "Valued Client"}!
               </h3>
-              <p className="text-sm text-[#77766F] max-w-sm mx-auto">
-                Our design specialist will connect with you within 2 hours to confirm your consultation slot and share custom layout concepts.
+              <p className="text-sm text-[#5F6368] max-w-sm mx-auto">
+                Our principal design team will connect with you within 2 hours to confirm your consultation schedule and discuss initial concepts.
               </p>
               <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
                 <a
                   href="tel:+919585544446"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#0E0F0A] text-[#FDFBF7] text-xs tracking-wider uppercase font-medium hover:bg-[#1C1E14] transition-colors"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded bg-[#1C6BAE] text-white text-xs tracking-wider uppercase font-medium hover:bg-[#124B78] transition-colors"
                 >
-                  <Phone className="w-3.5 h-3.5 text-[#EDB21F]" />
-                  Call Directly: +91 95855 44446
+                  <Phone className="w-3.5 h-3.5 text-white" />
+                  Direct Studio: +91 95855 44446
                 </a>
                 <button
                   onClick={handleReset}
-                  className="px-5 py-2.5 rounded-full border border-[#DAD6CB] text-xs font-medium text-[#0E0F0A] hover:bg-[#F3EFE7] transition-colors"
+                  className="px-5 py-2.5 rounded border border-[#E5E7E9] text-xs font-medium text-[#111111] hover:bg-[#F7F8F6] transition-colors"
                 >
                   Close
                 </button>
@@ -88,7 +88,7 @@ export function ConsultationModal({ isOpen, onClose }: ConsultationModalProps) {
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 <div>
-                  <label className="block text-xs font-medium text-[#0E0F0A] mb-1">
+                  <label className="block text-xs font-medium text-[#111111] mb-1">
                     Your Name *
                   </label>
                   <input
@@ -97,11 +97,11 @@ export function ConsultationModal({ isOpen, onClose }: ConsultationModalProps) {
                     placeholder="e.g. Karthik Rajan"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-lg border border-[#DAD6CB] bg-white text-sm focus:outline-none focus:border-[#EDB21F] transition-colors"
+                    className="w-full px-3.5 py-2.5 rounded border border-[#E5E7E9] bg-white text-sm text-[#111111] focus:outline-none focus:border-[#1C6BAE] focus:ring-1 focus:ring-[#1C6BAE] transition-colors"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-[#0E0F0A] mb-1">
+                  <label className="block text-xs font-medium text-[#111111] mb-1">
                     Phone Number *
                   </label>
                   <input
@@ -110,30 +110,30 @@ export function ConsultationModal({ isOpen, onClose }: ConsultationModalProps) {
                     placeholder="+91 98765 43210"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-lg border border-[#DAD6CB] bg-white text-sm focus:outline-none focus:border-[#EDB21F] transition-colors"
+                    className="w-full px-3.5 py-2.5 rounded border border-[#E5E7E9] bg-white text-sm text-[#111111] focus:outline-none focus:border-[#1C6BAE] focus:ring-1 focus:ring-[#1C6BAE] transition-colors"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 <div>
-                  <label className="block text-xs font-medium text-[#0E0F0A] mb-1">
+                  <label className="block text-xs font-medium text-[#111111] mb-1">
                     Project Type
                   </label>
                   <select
                     value={formData.projectType}
                     onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-lg border border-[#DAD6CB] bg-white text-sm focus:outline-none focus:border-[#EDB21F] transition-colors"
+                    className="w-full px-3.5 py-2.5 rounded border border-[#E5E7E9] bg-white text-sm text-[#111111] focus:outline-none focus:border-[#1C6BAE] focus:ring-1 focus:ring-[#1C6BAE] transition-colors"
                   >
-                    <option value="Residential">Residential Interior</option>
-                    <option value="Modular Kitchen">Modular Kitchen</option>
-                    <option value="Wardrobes">Wardrobes & Storage</option>
-                    <option value="Commercial">Commercial / Office</option>
-                    <option value="Turnkey">Complete Turnkey Interior</option>
+                    <option value="Residential">Residential Architecture</option>
+                    <option value="Modular Kitchen">Architectural Kitchen</option>
+                    <option value="Wardrobes">Bespoke Wardrobes</option>
+                    <option value="Commercial">Commercial Atelier / Studio</option>
+                    <option value="Turnkey">Turnkey Architectural Handover</option>
                   </select>
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-[#0E0F0A] mb-1">
+                  <label className="block text-xs font-medium text-[#111111] mb-1">
                     Location / City
                   </label>
                   <input
@@ -141,40 +141,40 @@ export function ConsultationModal({ isOpen, onClose }: ConsultationModalProps) {
                     placeholder="e.g. Chennai, Coimbatore, etc."
                     value={formData.city}
                     onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-lg border border-[#DAD6CB] bg-white text-sm focus:outline-none focus:border-[#EDB21F] transition-colors"
+                    className="w-full px-3.5 py-2.5 rounded border border-[#E5E7E9] bg-white text-sm text-[#111111] focus:outline-none focus:border-[#1C6BAE] focus:ring-1 focus:ring-[#1C6BAE] transition-colors"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-medium text-[#0E0F0A] mb-1">
-                  Brief Requirements / Notes (Optional)
+                <label className="block text-xs font-medium text-[#111111] mb-1">
+                  Brief Requirements / Spatial Notes (Optional)
                 </label>
                 <textarea
                   rows={2}
-                  placeholder="3BHK interior, false ceiling and modular kitchen requirement..."
+                  placeholder="3BHK residence, architectural lighting and custom joinery requirement..."
                   value={formData.notes}
                   onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                  className="w-full px-3.5 py-2 rounded-lg border border-[#DAD6CB] bg-white text-sm focus:outline-none focus:border-[#EDB21F] transition-colors resize-none"
+                  className="w-full px-3.5 py-2 rounded border border-[#E5E7E9] bg-white text-sm text-[#111111] focus:outline-none focus:border-[#1C6BAE] focus:ring-1 focus:ring-[#1C6BAE] transition-colors resize-none"
                 />
               </div>
 
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full py-3 px-6 rounded-full bg-[#EDB21F] hover:bg-[#C89212] text-[#0E0F0A] font-medium text-sm flex items-center justify-center gap-2 transition-colors shadow-md hover:shadow-lg active:scale-[0.99]"
+                  className="w-full py-3.5 px-6 rounded bg-[#1C6BAE] hover:bg-[#124B78] text-white font-medium text-xs tracking-wider uppercase flex items-center justify-center gap-2 transition-colors shadow-sm active:scale-[0.99]"
                 >
-                  Confirm Free Consultation
+                  Confirm Atelier Consultation
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
 
               <div className="text-center pt-2">
-                <span className="text-xs text-[#77766F]">
-                  Or call directly at{" "}
+                <span className="text-xs text-[#5F6368]">
+                  Or speak directly with our studio at{" "}
                   <a
                     href="tel:+919585544446"
-                    className="font-semibold text-[#0E0F0A] hover:text-[#EDB21F] transition-colors"
+                    className="font-semibold text-[#111111] hover:text-[#1C6BAE] transition-colors"
                   >
                     +91 95855 44446
                   </a>

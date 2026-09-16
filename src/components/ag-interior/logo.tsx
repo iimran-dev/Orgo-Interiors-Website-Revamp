@@ -10,28 +10,39 @@ interface LogoProps {
   size?: "sm" | "md" | "lg" | "xl";
 }
 
-export function Logo({ className = "", size = "md" }: LogoProps) {
+export function Logo({
+  className = "",
+  size = "md",
+  variant = "dark",
+}: LogoProps) {
   const dimensions = {
-    sm: { width: 44, height: 44, imgClass: "h-10 w-10 sm:h-11 sm:w-11" },
-    md: { width: 56, height: 56, imgClass: "h-12 w-12 sm:h-14 sm:w-14" },
-    lg: { width: 72, height: 72, imgClass: "h-16 w-16 sm:h-18 sm:w-18" },
-    xl: { width: 96, height: 96, imgClass: "h-20 w-20 sm:h-24 sm:w-24" },
+    sm: { width: 106, height: 45, imgClass: "h-8 sm:h-9 w-auto" },
+    md: { width: 141, height: 60, imgClass: "h-10 sm:h-12 w-auto" },
+    lg: { width: 176, height: 75, imgClass: "h-14 sm:h-16 w-auto" },
+    xl: { width: 220, height: 94, imgClass: "h-18 sm:h-20 w-auto" },
   }[size];
+
+  const variantClass =
+    variant === "white"
+      ? "brightness-0 invert"
+      : variant === "gold"
+      ? "brightness-110 sepia hue-rotate-15"
+      : "";
 
   return (
     <Link
       href="/"
-      className={`inline-flex flex-col items-center justify-center group select-none ${className}`}
-      aria-label="Honey Craft Interior Home"
+      className={`inline-flex items-center justify-center group select-none ${className}`}
+      aria-label="Orgo Interiors Home"
     >
       <div className="relative transition-transform duration-300 group-hover:scale-105">
         <Image
-          src={getAssetUrl("/images/logo.webp")}
-          alt="Honey Craft Interior Official Logo"
+          src={getAssetUrl("/images/logo.png")}
+          alt="Orgo Interiors Official Logo"
           width={dimensions.width}
           height={dimensions.height}
           priority
-          className={`${dimensions.imgClass} object-contain rounded-full`}
+          className={`${dimensions.imgClass} ${variantClass} object-contain`}
         />
       </div>
     </Link>

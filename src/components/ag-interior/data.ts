@@ -40,23 +40,23 @@ export const NAV_LINKS = [
 
 export const STATS = [
   {
-    value: "50+",
+    value: "60+",
     label: "Projects Completed",
     icon: "building",
   },
   {
     value: "100%",
-    label: "Custom Designs",
+    label: "Bespoke Architectural Plans",
     icon: "compass",
   },
   {
-    value: "End-to-End",
-    label: "Execution —",
+    value: "Turnkey",
+    label: "Execution & Oversight",
     icon: "refresh",
   },
   {
-    value: "Chennai Based",
-    label: "Serving Across Tamil Nadu",
+    value: "Chennai Studio",
+    label: "Serving Across South India",
     icon: "mapPin",
   },
 ];
@@ -64,94 +64,129 @@ export const STATS = [
 export const SERVICES: ServiceItem[] = [
   {
     id: "home-interiors",
-    title: "Home Interiors",
-    description: "Spaces that feel like you.",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop",
+    title: "Residential Architecture",
+    description: "Tailored residential environments defined by light, proportion, and bespoke craftsmanship.",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop",
   },
   {
     id: "modular-kitchens",
-    title: "Modular Kitchens",
-    description: "Smart. Stylish. Functional.",
-    image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop",
+    title: "Architectural Kitchens",
+    description: "Precision joinery, monolithic natural stone islands, and ergonomic culinary layouts.",
+    image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=1000&auto=format&fit=crop",
   },
   {
     id: "wardrobes",
-    title: "Wardrobes",
-    description: "Designed for modern living.",
-    image: "https://images.unsplash.com/photo-1558997519-83ea9252edf8?q=80&w=800&auto=format&fit=crop",
+    title: "Bespoke Wardrobes",
+    description: "Integrated dressing suites with fluted glass, architectural timber, and concealed hardware.",
+    image: "https://images.unsplash.com/photo-1558997519-83ea9252edf8?q=80&w=1000&auto=format&fit=crop",
   },
   {
     id: "false-ceilings",
-    title: "False Ceilings",
-    description: "Crafting light, creating mood.",
-    image: "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=800&auto=format&fit=crop",
+    title: "Ceilings & Illumination",
+    description: "Sculptural architectural profiles, concealed cove details, and ambient lighting design.",
+    image: "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=1000&auto=format&fit=crop",
   },
 ];
 
 export const PROJECTS: ProjectItem[] = [
   {
-    id: "modern-villa",
-    title: "Modern Villa",
-    location: "Chennai",
+    id: "poes-garden-villa",
+    title: "The Pavilion Residence",
+    location: "Poes Garden, Chennai",
     category: "Residential",
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1400&auto=format&fit=crop",
     featured: true,
   },
   {
-    id: "apartment-interior",
-    title: "Apartment Interior",
+    id: "boat-club-manor",
+    title: "Minimalist Monolith Villa",
+    location: "Boat Club Road, Chennai",
+    category: "Residential",
+    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1000&auto=format&fit=crop",
+  },
+  {
+    id: "coastal-penthouse",
+    title: "East Coast Penthouse",
     location: "ECR, Chennai",
     category: "Living",
-    image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1000&auto=format&fit=crop",
   },
   {
-    id: "modular-kitchen-project",
-    title: "Modular Kitchen",
-    location: "Anna Nagar",
+    id: "harrington-lounge",
+    title: "Courtyard Residence Lounge",
+    location: "Chetpet, Chennai",
+    category: "Living",
+    image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1000&auto=format&fit=crop",
+  },
+  {
+    id: "monolithic-kitchen",
+    title: "Travertine Culinary Studio",
+    location: "Boat Club Road, Chennai",
     category: "Kitchens",
-    image: "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=1000&auto=format&fit=crop",
   },
   {
-    id: "luxury-bedroom",
-    title: "Luxury Bedroom",
+    id: "nordic-culinary",
+    title: "Oak & Quartz Kitchen",
+    location: "Nungambakkam, Chennai",
+    category: "Kitchens",
+    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1000&auto=format&fit=crop",
+  },
+  {
+    id: "sanctuary-suite",
+    title: "Minimalist Master Suite",
     location: "Adyar, Chennai",
     category: "Bedrooms",
-    image: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?q=80&w=1000&auto=format&fit=crop",
   },
   {
-    id: "office-space",
-    title: "Office Space",
-    location: "OMR IT Corridor",
+    id: "bespoke-bedroom",
+    title: "Linen & Oak Guest Chamber",
+    location: "Alwarpet, Chennai",
+    category: "Bedrooms",
+    image: "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=80&w=1000&auto=format&fit=crop",
+  },
+  {
+    id: "headquarters-studio",
+    title: "Executive Design Atelier",
+    location: "OMR, Chennai",
     category: "Commercial",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1000&auto=format&fit=crop",
+  },
+  {
+    id: "private-equity-office",
+    title: "Boardroom & Partner Suite",
+    location: "Guindy, Chennai",
+    category: "Commercial",
+    image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1000&auto=format&fit=crop",
   },
 ];
 
 export const PROCESS_STEPS: ProcessStep[] = [
   {
     step: "01",
-    title: "Consultation",
-    description: "Understand your needs",
+    title: "DISCOVER",
+    description: "Client vision, spatial audit & architectural brief.",
   },
   {
     step: "02",
-    title: "Design & Planning",
-    description: "3D concept & space planning",
+    title: "DEFINE",
+    description: "Space planning, zoning & schematic layouts.",
   },
   {
     step: "03",
-    title: "Material Selection",
-    description: "Curated for quality & style",
+    title: "DESIGN",
+    description: "Photorealistic 3D visualization & material selection.",
   },
   {
     step: "04",
-    title: "Execution",
-    description: "On-time delivery with precision",
+    title: "DEVELOP",
+    description: "Precision fabrication, engineering & scheduling.",
   },
   {
     step: "05",
-    title: "Handover",
-    description: "Spaces ready for a better you",
+    title: "DELIVER",
+    description: "Turnkey installation, final styling & flawless handover.",
   },
 ];
 
@@ -159,21 +194,31 @@ export const TESTIMONIALS: TestimonialItem[] = [
   {
     id: "priya-karthik",
     quote:
-      "Honey Craft Interior transformed our house into a home. Their attention to detail, creative ideas, and professional execution were outstanding!",
+      "ORGO Interiors transformed our residence into a timeless sanctuary. Their architectural clarity, restrained material palette, and uncompromising execution set them in a league of their own.",
     name: "Priya & Karthik",
-    location: "Chennai",
+    location: "Poes Garden, Chennai",
     avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop",
     interiorImage:
-      "https://images.unsplash.com/photo-1615529182904-14819c35db37?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1000&auto=format&fit=crop",
   },
   {
     id: "ramesh-anitha",
     quote:
-      "The modular kitchen and wardrobe work exceeded all our expectations. The team delivered right on schedule with flawless finishing.",
+      "From bespoke millwork to ambient lighting details, the ORGO team delivered with exacting precision. The experience was seamless and the finished residence is exceptional.",
     name: "Ramesh & Anitha",
     location: "Coimbatore",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300&auto=format&fit=crop",
     interiorImage:
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1000&auto=format&fit=crop",
+  },
+  {
+    id: "vikram-divya",
+    quote:
+      "The balance of natural travertine, concealed lighting, and tailored cabinetry brought an extraordinary calm to our home. ORGO Interiors understands architectural subtlety.",
+    name: "Vikram & Divya",
+    location: "Boat Club Road, Chennai",
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=300&auto=format&fit=crop",
+    interiorImage:
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop",
   },
 ];

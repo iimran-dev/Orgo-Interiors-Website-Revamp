@@ -20,32 +20,32 @@ export function TestimonialsSection() {
   const current = TESTIMONIALS[currentIndex];
 
   return (
-    <section className="py-16 sm:py-24 lg:py-28 bg-[#FDFBF7] border-t border-[#DAD6CB] relative overflow-hidden">
+    <section className="py-16 sm:py-24 lg:py-28 bg-white border-t border-[#E5E7E9] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
-          {/* Left Column: Heading, Tag & Circular Navigation Controls */}
+          {/* Left Column: Heading, Tag & Architectural Navigation Controls */}
           <div data-animate="fade-up" className="lg:col-span-4 xl:col-span-4">
             
             {/* Kicker */}
             <div className="flex items-center gap-2 mb-3">
-              <span className="h-px w-6 bg-[#EDB21F]" />
-              <span className="text-[11px] font-sans uppercase tracking-[0.24em] text-[#EDB21F] font-semibold">
-                What Our Clients Say
+              <span className="h-px w-6 bg-[#1C6BAE]" />
+              <span className="text-[11px] font-sans uppercase tracking-[0.24em] text-[#1C6BAE] font-semibold">
+                Client Perspectives
               </span>
             </div>
 
             {/* Headline */}
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-[42px] leading-tight text-[#0E0F0A] font-medium tracking-tight mb-6 sm:mb-8">
-              Homes Designed. <br />
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-[42px] leading-tight text-[#111111] font-medium tracking-tight mb-6 sm:mb-8">
+              Spaces Designed. <br />
               Lives Enriched.
             </h2>
 
-            {/* Prev / Next Circular Arrows with Accessible 44px Target */}
-            <div className="flex items-center gap-3">
+            {/* Prev / Next Controls with moderate architectural radius */}
+            <div className="flex items-center gap-2.5">
               <button
                 onClick={handlePrev}
-                className="w-11 h-11 rounded-full border border-[#DAD6CB] flex items-center justify-center text-[#0E0F0A] hover:border-[#EDB21F] hover:bg-[#EDB21F] hover:text-[#0E0F0A] transition-all duration-300 active:scale-95 shadow-sm"
+                className="w-10 h-10 rounded border border-[#E5E7E9] bg-white flex items-center justify-center text-[#111111] hover:border-[#1C6BAE] hover:bg-[#1C6BAE] hover:text-white transition-all duration-300 active:scale-95 shadow-none"
                 aria-label="Previous client testimonial"
               >
                 <ArrowLeft className="w-4 h-4" />
@@ -53,7 +53,7 @@ export function TestimonialsSection() {
 
               <button
                 onClick={handleNext}
-                className="w-11 h-11 rounded-full border border-[#DAD6CB] flex items-center justify-center text-[#0E0F0A] hover:border-[#EDB21F] hover:bg-[#EDB21F] hover:text-[#0E0F0A] transition-all duration-300 active:scale-95 shadow-sm"
+                className="w-10 h-10 rounded border border-[#E5E7E9] bg-white flex items-center justify-center text-[#111111] hover:border-[#1C6BAE] hover:bg-[#1C6BAE] hover:text-white transition-all duration-300 active:scale-95 shadow-none"
                 aria-label="Next client testimonial"
               >
                 <ArrowRight className="w-4 h-4" />
@@ -66,10 +66,10 @@ export function TestimonialsSection() {
           <div data-animate="fade-up" className="lg:col-span-8 xl:col-span-8 grid grid-cols-1 sm:grid-cols-12 gap-6 items-stretch">
             
             {/* Testimonial Quote Card */}
-            <div className="sm:col-span-7 bg-white rounded-2xl p-6 sm:p-8 border border-[#DAD6CB] shadow-sm relative flex flex-col justify-between min-h-[260px] overflow-hidden">
+            <div className="sm:col-span-7 bg-[#F7F8F6] rounded p-6 sm:p-8 border border-[#E5E7E9] shadow-none relative flex flex-col justify-between min-h-[260px] overflow-hidden">
               
               {/* Top Quote Mark Icon */}
-              <div className="text-4xl sm:text-5xl font-display text-[#EDB21F]/70 leading-none select-none">
+              <div className="text-4xl sm:text-5xl font-display text-[#1C6BAE] leading-none select-none">
                 “
               </div>
 
@@ -84,13 +84,13 @@ export function TestimonialsSection() {
                   className="flex flex-col justify-between flex-1"
                 >
                   {/* Quote text */}
-                  <p className="font-sans text-sm sm:text-base text-[#0E0F0A] font-light leading-relaxed my-4 min-h-[72px]">
+                  <p className="font-sans text-sm sm:text-base text-[#111111] font-normal leading-relaxed my-4 min-h-[72px]">
                     {current.quote}
                   </p>
 
                   {/* Author & Location */}
-                  <div className="flex items-center gap-3 pt-3 border-t border-[#DAD6CB]/40">
-                    <div className="relative w-10 h-10 rounded-full overflow-hidden border border-[#EDB21F]/40 flex-shrink-0">
+                  <div className="flex items-center gap-3 pt-3 border-t border-[#E5E7E9]">
+                    <div className="relative w-10 h-10 rounded-full overflow-hidden border border-[#E5E7E9] flex-shrink-0">
                       <Image
                         src={current.avatar}
                         alt={current.name}
@@ -100,16 +100,16 @@ export function TestimonialsSection() {
                       />
                     </div>
                     <div>
-                      <h4 className="font-display text-sm font-semibold text-[#0E0F0A]">
+                      <h4 className="font-display text-sm font-semibold text-[#111111]">
                         {current.name}
                       </h4>
-                      <p className="font-sans text-xs text-[#77766F] font-light">
+                      <p className="font-sans text-xs text-[#5F6368] font-normal">
                         {current.location}
                       </p>
                     </div>
 
                     {/* Closing quote mark in bottom right */}
-                    <div className="ml-auto text-3xl font-display text-[#EDB21F]/50 leading-none select-none">
+                    <div className="ml-auto text-3xl font-display text-[#1C6BAE]/40 leading-none select-none">
                       ”
                     </div>
                   </div>
@@ -119,7 +119,7 @@ export function TestimonialsSection() {
             </div>
 
             {/* Beside: Atmospheric Warm Dining Interior Photo with smooth image cross-fade */}
-            <div className="sm:col-span-5 relative aspect-[4/3] sm:aspect-auto sm:min-h-[260px] rounded-2xl overflow-hidden border border-[#DAD6CB] shadow-sm group bg-[#F3EFE7]">
+            <div className="sm:col-span-5 relative aspect-[4/3] sm:aspect-auto sm:min-h-[260px] rounded overflow-hidden border border-[#E5E7E9] shadow-none group bg-[#F7F8F6]">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentIndex}
@@ -136,7 +136,7 @@ export function TestimonialsSection() {
                     className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                     sizes="(max-width: 640px) 100vw, 350px"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent pointer-events-none" />
                 </motion.div>
               </AnimatePresence>
             </div>

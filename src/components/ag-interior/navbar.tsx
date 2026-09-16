@@ -26,8 +26,8 @@ export function Navbar({ onOpenConsultation }: NavbarProps) {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         scrolled
-          ? "bg-[#FDFBF7]/95 backdrop-blur-md shadow-[0_2px_20px_rgba(14,15,10,0.04)] py-3 border-b border-[#DAD6CB]"
-          : "bg-transparent py-4 sm:py-5"
+          ? "bg-white/95 backdrop-blur-md shadow-[0_2px_15px_rgba(17,17,17,0.03)] py-3.5 border-b border-[#E5E7E9]"
+          : "bg-white/80 backdrop-blur-sm py-4 sm:py-5 border-b border-[#E5E7E9]/60"
       }`}
     >
       <div className="w-full max-w-[1536px] mx-auto px-4 sm:px-8 lg:px-12 flex items-center justify-between">
@@ -36,12 +36,12 @@ export function Navbar({ onOpenConsultation }: NavbarProps) {
           <Logo size="md" />
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center space-x-5 lg:space-x-7">
+          <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-xs lg:text-[13px] font-sans font-medium text-[#0E0F0A] tracking-wider hover:text-[#EDB21F] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-[#EDB21F] hover:after:w-full after:transition-all after:duration-300 whitespace-nowrap"
+                className="text-xs lg:text-[13px] font-sans font-medium text-[#111111] tracking-wider hover:text-[#1C6BAE] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-[#1C6BAE] hover:after:w-full after:transition-all after:duration-300 whitespace-nowrap"
               >
                 {link.label}
               </Link>
@@ -49,11 +49,11 @@ export function Navbar({ onOpenConsultation }: NavbarProps) {
           </nav>
         </div>
 
-        {/* Right Action Button: 10% Honey Gold Accent */}
+        {/* Right Action Button: 5% ORGO Blue Accent */}
         <div className="hidden md:flex items-center space-x-4">
           <button
             onClick={onOpenConsultation}
-            className="group relative inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#EDB21F] hover:bg-[#C89212] text-[#0E0F0A] text-xs font-semibold tracking-wider shadow-sm hover:shadow-md transition-all duration-300 active:scale-[0.98]"
+            className="group relative inline-flex items-center gap-2 px-6 py-2.5 rounded bg-[#1C6BAE] hover:bg-[#124B78] text-white text-xs font-medium tracking-wider shadow-sm hover:shadow transition-all duration-300 active:scale-[0.98]"
           >
             <span>Book a Consultation</span>
             <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
@@ -64,7 +64,7 @@ export function Navbar({ onOpenConsultation }: NavbarProps) {
         <div className="flex md:hidden items-center space-x-2">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-lg text-[#0E0F0A] hover:bg-[#F3EFE7] transition-colors"
+            className="p-2 rounded text-[#111111] hover:bg-[#F7F8F6] transition-colors"
             aria-label="Toggle navigation menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -74,14 +74,14 @@ export function Navbar({ onOpenConsultation }: NavbarProps) {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#FDFBF7] border-b border-[#DAD6CB] px-6 py-6 space-y-4 shadow-xl animate-in slide-in-from-top duration-300">
+        <div className="md:hidden bg-white border-b border-[#E5E7E9] px-6 py-6 space-y-4 shadow-xl animate-in slide-in-from-top duration-300">
           <div className="flex flex-col space-y-3">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-base font-medium text-[#0E0F0A] hover:text-[#EDB21F] transition-colors py-1.5 border-b border-[#DAD6CB]/50"
+                className="text-base font-medium text-[#111111] hover:text-[#1C6BAE] transition-colors py-2 border-b border-[#E5E7E9]"
               >
                 {link.label}
               </Link>
@@ -94,7 +94,7 @@ export function Navbar({ onOpenConsultation }: NavbarProps) {
                 setMobileMenuOpen(false);
                 onOpenConsultation();
               }}
-              className="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-[#EDB21F] hover:bg-[#C89212] text-[#0E0F0A] text-xs font-semibold tracking-wider uppercase shadow-md transition-colors"
+              className="w-full flex items-center justify-center gap-2 py-3 rounded bg-[#1C6BAE] hover:bg-[#124B78] text-white text-xs font-medium tracking-wider uppercase shadow transition-colors"
             >
               <span>Book a Consultation</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -102,9 +102,9 @@ export function Navbar({ onOpenConsultation }: NavbarProps) {
 
             <a
               href="tel:+919585544446"
-              className="w-full flex items-center justify-center gap-2 py-2.5 rounded-full border border-[#DAD6CB] text-xs font-medium text-[#0E0F0A] hover:border-[#EDB21F] transition-colors"
+              className="w-full flex items-center justify-center gap-2 py-2.5 rounded border border-[#E5E7E9] text-xs font-medium text-[#111111] hover:border-[#1C6BAE] hover:text-[#1C6BAE] transition-colors"
             >
-              <Phone className="w-3.5 h-3.5 text-[#EDB21F]" />
+              <Phone className="w-3.5 h-3.5 text-[#1C6BAE]" />
               <span>+91 95855 44446</span>
             </a>
           </div>

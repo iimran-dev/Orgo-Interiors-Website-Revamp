@@ -26,21 +26,20 @@ const alexBrush = Alex_Brush({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://honeycraftinteriors.in"),
-  title: "Honey Craft Interior — Design Beyond Spaces. For a Better You.",
+  metadataBase: new URL("https://orgointeriors.com"),
+  title: "ORGO Interiors — Refined Architectural & Spatial Design",
   description:
-    "Thoughtfully designed residential and commercial interiors that blend aesthetics, functionality and your unique lifestyle. Chennai based, serving across Tamil Nadu.",
+    "ORGO Interiors designs tailored residential architecture, bespoke culinary studios, and executive ateliers defined by light, proportion, and craftsmanship. Chennai atelier serving South India.",
   keywords: [
-    "Honey Craft Interior",
-    "Honey Craft",
-    "Interior Designers Chennai",
-    "Luxury Home Interiors",
-    "Modular Kitchens Chennai",
-    "Turnkey Interior Solutions",
-    "False Ceilings",
-    "Wardrobe Design",
+    "ORGO Interiors",
+    "Architectural Interior Design",
+    "Luxury Residential Architecture Chennai",
+    "Bespoke Kitchens Chennai",
+    "Turnkey Interior Architecture",
+    "Poes Garden Interior Designers",
+    "Boat Club Road Architecture",
   ],
-  authors: [{ name: "Honey Craft Interior" }],
+  authors: [{ name: "ORGO Interiors" }],
   icons: {
     icon: [
       { url: getAssetUrl("/favicon.ico"), sizes: "32x32" },
@@ -50,17 +49,17 @@ export const metadata: Metadata = {
     apple: getAssetUrl("/apple-touch-icon.png"),
   },
   openGraph: {
-    title: "Honey Craft Interior — Design Beyond Spaces. For a Better You.",
+    title: "ORGO Interiors — Refined Architectural & Spatial Design",
     description:
-      "Thoughtfully designed residential and commercial interiors that blend aesthetics, functionality and your unique lifestyle.",
-    url: "https://honeycraftinteriors.in",
-    siteName: "Honey Craft Interior",
+      "Tailored residential architecture, bespoke culinary studios, and executive ateliers defined by light, proportion, and craftsmanship.",
+    url: "https://orgointeriors.com",
+    siteName: "ORGO Interiors",
     images: [
       {
-        url: getAssetUrl("/images/logo.webp"),
-        width: 1024,
-        height: 1024,
-        alt: "Honey Craft Interior Official Logo",
+        url: getAssetUrl("/images/logo.png"),
+        width: 705,
+        height: 300,
+        alt: "ORGO Interiors Official Logo",
       },
     ],
     type: "website",
@@ -68,10 +67,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Honey Craft Interior — Design Beyond Spaces",
+    title: "ORGO Interiors — Refined Architectural & Spatial Design",
     description:
-      "Thoughtfully designed residential and commercial interiors that blend aesthetics, functionality and your unique lifestyle.",
-    images: [getAssetUrl("/images/logo.webp")],
+      "Tailored residential architecture, bespoke culinary studios, and executive ateliers defined by light, proportion, and craftsmanship.",
+    images: [getAssetUrl("/images/logo.png")],
   },
 };
 

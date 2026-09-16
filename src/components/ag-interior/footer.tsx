@@ -6,87 +6,93 @@ import { MapPin, Phone, Mail, Instagram, MessageCircle, Facebook } from "lucide-
 
 export function Footer() {
   const archImage =
-    "https://images.unsplash.com/photo-1584589167171-541ce45f1eea?q=80&w=600&auto=format&fit=crop";
+    "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=600&auto=format&fit=crop";
 
   return (
-    <footer id="contact" className="bg-[#FDFBF7] pt-14 sm:pt-20 pb-12 border-t border-[#DAD6CB] relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer id="contact" className="bg-[#0B2A43] text-white pt-16 sm:pt-20 pb-12 border-t border-white/10 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Main Footer Columns */}
         <div data-animate="fade-up" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-12 sm:mb-14">
           
           {/* Col 1: Brand & Slogan (3 cols) */}
           <div className="lg:col-span-3 flex flex-col items-start">
-            <Logo size="md" className="!items-start mb-4" />
-            <p className="font-display italic text-sm text-[#77766F] mt-2 max-w-xs leading-relaxed">
+            {/* Official Logo mounted on a clean architectural off-white panel */}
+            <div className="bg-[#F7F8F6] px-3.5 py-2 rounded border border-white/20 inline-flex items-center mb-4 shadow-sm">
+              <Logo size="md" className="!items-start" />
+            </div>
+            <p className="font-display italic text-sm text-[#D9E3EA] mt-1 max-w-xs leading-relaxed">
               Thoughtful Spaces <br />
-              for a Better Tomorrow.
+              for Architectural Living.
             </p>
+            <span className="text-[10px] font-sans uppercase tracking-[0.24em] text-[#1C6BAE] font-semibold mt-4">
+              Chennai Studio & Atelier
+            </span>
           </div>
 
           {/* Col 2: Quick Links (2 cols) */}
           <div className="lg:col-span-2">
-            <h4 className="font-display text-sm font-semibold text-[#0E0F0A] uppercase tracking-wider mb-4">
-              Quick Links
+            <h4 className="font-display text-xs font-semibold text-white uppercase tracking-[0.2em] mb-4">
+              Navigation
             </h4>
-            <ul className="space-y-2.5 text-xs sm:text-sm font-sans text-[#77766F]">
+            <ul className="space-y-2.5 text-xs sm:text-sm font-sans text-[#D9E3EA]">
               <li>
-                <Link href="#hero" className="hover:text-[#EDB21F] transition-colors inline-block py-0.5">
+                <Link href="#hero" className="hover:text-[#1C6BAE] transition-colors inline-block py-0.5">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="#about" className="hover:text-[#EDB21F] transition-colors inline-block py-0.5">
-                  About
+                <Link href="#about" className="hover:text-[#1C6BAE] transition-colors inline-block py-0.5">
+                  About Atelier
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="hover:text-[#EDB21F] transition-colors inline-block py-0.5">
-                  Services
+                <Link href="#services" className="hover:text-[#1C6BAE] transition-colors inline-block py-0.5">
+                  Disciplines
                 </Link>
               </li>
               <li>
-                <Link href="#projects" className="hover:text-[#EDB21F] transition-colors inline-block py-0.5">
-                  Projects
+                <Link href="#projects" className="hover:text-[#1C6BAE] transition-colors inline-block py-0.5">
+                  Portfolio
                 </Link>
               </li>
               <li>
-                <Link href="#contact" className="hover:text-[#EDB21F] transition-colors inline-block py-0.5">
-                  Contact
+                <Link href="#process" className="hover:text-[#1C6BAE] transition-colors inline-block py-0.5">
+                  Process
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Col 3: Our Services (2 cols) */}
+          {/* Col 3: Our Disciplines (2 cols) */}
           <div className="lg:col-span-2">
-            <h4 className="font-display text-sm font-semibold text-[#0E0F0A] uppercase tracking-wider mb-4">
-              Our Services
+            <h4 className="font-display text-xs font-semibold text-white uppercase tracking-[0.2em] mb-4">
+              Disciplines
             </h4>
-            <ul className="space-y-2.5 text-xs sm:text-sm font-sans text-[#77766F]">
+            <ul className="space-y-2.5 text-xs sm:text-sm font-sans text-[#D9E3EA]">
               <li>
-                <Link href="#services" className="hover:text-[#EDB21F] transition-colors inline-block py-0.5">
-                  Home Interiors
+                <Link href="#services" className="hover:text-[#1C6BAE] transition-colors inline-block py-0.5">
+                  Residential Architecture
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="hover:text-[#EDB21F] transition-colors inline-block py-0.5">
-                  Modular Kitchens
+                <Link href="#services" className="hover:text-[#1C6BAE] transition-colors inline-block py-0.5">
+                  Architectural Kitchens
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="hover:text-[#EDB21F] transition-colors inline-block py-0.5">
-                  Wardrobes
+                <Link href="#services" className="hover:text-[#1C6BAE] transition-colors inline-block py-0.5">
+                  Bespoke Wardrobes
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="hover:text-[#EDB21F] transition-colors inline-block py-0.5">
-                  False Ceilings
+                <Link href="#services" className="hover:text-[#1C6BAE] transition-colors inline-block py-0.5">
+                  Ceilings & Illumination
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="hover:text-[#EDB21F] transition-colors inline-block py-0.5">
-                  Commercial Interiors
+                <Link href="#services" className="hover:text-[#1C6BAE] transition-colors inline-block py-0.5">
+                  Commercial Ateliers
                 </Link>
               </li>
             </ul>
@@ -94,44 +100,44 @@ export function Footer() {
 
           {/* Col 4: Contact Us (3 cols) */}
           <div className="lg:col-span-3">
-            <h4 className="font-display text-sm font-semibold text-[#0E0F0A] uppercase tracking-wider mb-4">
-              Contact Us
+            <h4 className="font-display text-xs font-semibold text-white uppercase tracking-[0.2em] mb-4">
+              Studio & Contact
             </h4>
-            <ul className="space-y-3 text-xs sm:text-sm font-sans text-[#77766F]">
+            <ul className="space-y-3 text-xs sm:text-sm font-sans text-[#D9E3EA]">
               <li className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-[#EDB21F] flex-shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-[#1C6BAE] flex-shrink-0 mt-0.5" />
                 <span>
                   Jonas The Downs Avenue, <br />
-                  Chennai, India 600127
+                  Chennai, Tamil Nadu 600127
                 </span>
               </li>
               <li className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-[#EDB21F] flex-shrink-0" />
+                <Phone className="w-4 h-4 text-[#1C6BAE] flex-shrink-0" />
                 <a
                   href="tel:+919585544446"
-                  className="hover:text-[#EDB21F] transition-colors"
+                  className="hover:text-[#1C6BAE] transition-colors"
                 >
                   +91 95855 44446
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-[#EDB21F] flex-shrink-0" />
+                <Mail className="w-4 h-4 text-[#1C6BAE] flex-shrink-0" />
                 <a
-                  href="mailto:contact@honeycraftinteriors.com"
-                  className="hover:text-[#EDB21F] transition-colors"
+                  href="mailto:contact@orgointeriors.com"
+                  className="hover:text-[#1C6BAE] transition-colors"
                 >
-                  contact@honeycraftinteriors.com
+                  contact@orgointeriors.com
                 </a>
               </li>
             </ul>
 
             {/* Social Icons */}
-            <div className="flex items-center gap-3 mt-5">
+            <div className="flex items-center gap-2.5 mt-5">
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 rounded-full border border-[#DAD6CB] flex items-center justify-center text-[#77766F] hover:border-[#EDB21F] hover:text-[#EDB21F] transition-colors"
+                className="w-8 h-8 rounded border border-white/20 flex items-center justify-center text-[#D9E3EA] hover:border-[#1C6BAE] hover:text-[#1C6BAE] transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-4 h-4" />
@@ -140,7 +146,7 @@ export function Footer() {
                 href="https://wa.me/919585544446"
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 rounded-full border border-[#DAD6CB] flex items-center justify-center text-[#77766F] hover:border-[#EDB21F] hover:text-[#EDB21F] transition-colors"
+                className="w-8 h-8 rounded border border-white/20 flex items-center justify-center text-[#D9E3EA] hover:border-[#1C6BAE] hover:text-[#1C6BAE] transition-colors"
                 aria-label="WhatsApp"
               >
                 <MessageCircle className="w-4 h-4" />
@@ -149,7 +155,7 @@ export function Footer() {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 rounded-full border border-[#DAD6CB] flex items-center justify-center text-[#77766F] hover:border-[#EDB21F] hover:text-[#EDB21F] transition-colors"
+                className="w-8 h-8 rounded border border-white/20 flex items-center justify-center text-[#D9E3EA] hover:border-[#1C6BAE] hover:text-[#1C6BAE] transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="w-4 h-4" />
@@ -157,32 +163,32 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Col 5: Arched Decorative Photo & Script Text (2 cols) */}
+          {/* Col 5: Architectural Photo & Cadence (2 cols) */}
           <div className="lg:col-span-2 flex items-center gap-4 sm:col-span-2 lg:justify-end">
-            {/* Arched small frame */}
+            {/* Architectural small frame */}
             <div
               data-animate="arch-reveal"
-              className="relative w-20 sm:w-24 h-32 sm:h-36 rounded-t-full rounded-b-lg overflow-hidden border border-[#DAD6CB] shadow-sm flex-shrink-0 bg-[#F3EFE7]"
+              className="relative w-20 sm:w-24 h-32 sm:h-36 rounded overflow-hidden border border-white/20 shadow-none flex-shrink-0 bg-[#0E3352]"
             >
               <Image
                 src={archImage}
-                alt="Botanical Architecture Decor"
+                alt="Architectural Material Vignette"
                 fill
                 className="object-cover object-center"
                 sizes="120px"
               />
             </div>
 
-            {/* Cursive Tag: Design Live Belong */}
+            {/* Architectural Cadence */}
             <div className="flex flex-col space-y-1">
-              <span className="font-script text-2xl text-[#EDB21F] leading-none">
+              <span className="font-display text-sm uppercase tracking-[0.24em] text-[#1C6BAE] font-medium leading-none">
                 Design
               </span>
-              <span className="font-script text-2xl text-[#0E0F0A] leading-none">
-                Live
+              <span className="font-display text-sm uppercase tracking-[0.24em] text-white font-medium leading-none">
+                Refine
               </span>
-              <span className="font-script text-2xl text-[#EDB21F] leading-none">
-                Belong
+              <span className="font-display text-sm uppercase tracking-[0.24em] text-[#1C6BAE] font-medium leading-none">
+                Deliver
               </span>
             </div>
           </div>
@@ -190,10 +196,10 @@ export function Footer() {
         </div>
 
         {/* Bottom Copyright Bar */}
-        <div className="pt-8 border-t border-[#DAD6CB] flex flex-col sm:flex-row items-center justify-between text-xs font-sans text-[#77766F] gap-3 text-center sm:text-left">
-          <p>© 2025 Honey Craft Interior. All rights reserved.</p>
-          <p className="font-display italic text-[#EDB21F]">
-            Interiors for a Better You.
+        <div className="pt-8 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between text-xs font-sans text-[#D9E3EA] gap-3 text-center sm:text-left">
+          <p>© 2025 ORGO Interiors. All rights reserved.</p>
+          <p className="font-display italic text-[#1C6BAE]">
+            Architecture for Timeless Living.
           </p>
         </div>
 
