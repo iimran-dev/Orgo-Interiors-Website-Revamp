@@ -3,7 +3,7 @@ import React from "react";
 export function StatsBar() {
   const stats = [
     {
-      value: "50+",
+      value: "60+",
       label: "Projects Completed",
       icon: (
         <svg
@@ -27,7 +27,7 @@ export function StatsBar() {
     },
     {
       value: "100%",
-      label: "Bespoke Plans",
+      label: "Bespoke Architecture",
       icon: (
         <svg
           className="w-5 h-5 text-[#1C6BAE]"
@@ -69,7 +69,7 @@ export function StatsBar() {
     },
     {
       value: "Chennai Studio",
-      label: "Serving Across South India",
+      label: "Serving South India",
       icon: (
         <svg
           className="w-5 h-5 text-[#1C6BAE]"
@@ -112,7 +112,7 @@ export function StatsBar() {
                 {item.icon}
               </div>
               <div>
-                <span className="block font-display text-base sm:text-2xl font-medium text-[#111111] leading-tight tracking-tight group-hover:text-[#1C6BAE] transition-colors">
+                <span className="block font-display text-base sm:text-xl lg:text-2xl font-medium text-[#111111] leading-tight tracking-tight group-hover:text-[#1C6BAE] transition-colors">
                   {item.value}
                 </span>
                 <span className="block font-sans text-[10px] sm:text-xs text-[#5F6368] font-normal mt-0.5 leading-tight">

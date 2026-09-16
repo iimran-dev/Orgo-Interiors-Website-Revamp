@@ -44,38 +44,35 @@ export function AboutSection() {
           <div data-animate="fade-up" className="lg:col-span-7 flex flex-col justify-center">
             
             {/* Tag / Kicker */}
-            <div className="flex items-center gap-2.5 mb-3">
-              <span className="h-px w-7 bg-[#1C6BAE]" />
-              <span className="text-[11px] font-sans uppercase tracking-[0.24em] text-[#1C6BAE] font-semibold">
+            <div className="flex items-center gap-2 mb-2 sm:mb-3">
+              <span className="h-px w-6 sm:w-7 bg-[#1C6BAE]" />
+              <span className="text-[10px] sm:text-[11px] font-sans uppercase tracking-[0.22em] text-[#1C6BAE] font-semibold">
                 About ORGO Interiors
               </span>
             </div>
 
             {/* Headline */}
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-[44px] leading-[1.18] text-[#111111] font-medium tracking-tight mb-5 sm:mb-6">
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-[40px] xl:text-[44px] leading-[1.14] text-[#111111] font-medium tracking-[-0.015em] mb-4 sm:mb-6">
               Architecture of Restraint. <br className="hidden sm:inline" />
               Spaces for Living.
             </h2>
 
             {/* Paragraph Description */}
-            <p className="font-sans text-[#5F6368] leading-relaxed text-sm sm:text-base mb-6 sm:mb-8 max-w-xl font-normal">
+            <p className="font-sans text-[#5F6368] leading-[1.68] text-xs sm:text-sm lg:text-base mb-6 sm:mb-8 max-w-xl font-normal">
               At ORGO Interiors, we believe great design is rooted in structural clarity, tactile honesty, and timeless proportions. Guided by an architectural sensibility, our studio curates residential and commercial environments that feel tranquil, enduring, and deeply personal.
             </p>
 
-            {/* Atelier Credit */}
-            <div className="mb-8 sm:mb-10 flex items-center gap-4">
-              <div className="w-1 h-10 bg-[#1C6BAE]" />
-              <div>
-                <span className="font-display text-lg font-medium text-[#111111] block">
-                  ORGO Design Atelier
-                </span>
-                <span className="block text-[11px] font-sans tracking-[0.2em] uppercase text-[#5F6368]">
-                  Architectural Practice & Interior Architecture
-                </span>
-              </div>
+            {/* Atelier Manifesto Statement */}
+            <div className="mb-6 sm:mb-8 pl-4 border-l-2 border-[#1C6BAE]">
+              <p className="font-display italic text-sm sm:text-base text-[#111111] leading-relaxed">
+                “True luxury is quiet proportion, authentic materials, and enduring craftsmanship.”
+              </p>
+              <span className="block text-[10px] sm:text-[11px] font-sans uppercase tracking-[0.2em] text-[#1C6BAE] font-semibold mt-1.5">
+                ORGO Design Atelier · Chennai Studio
+              </span>
             </div>
 
-            {/* Lower Composition: Secondary Image + Architectural Badges */}
+            {/* Lower Composition: Secondary Image + Architectural Credentials */}
             <div data-animate="fade-up" className="grid grid-cols-1 sm:grid-cols-12 gap-6 items-center pt-6 border-t border-[#E5E7E9]">
               
               {/* Secondary Detail Image */}
@@ -89,22 +86,22 @@ export function AboutSection() {
                 />
               </div>
 
-              {/* Architectural Credentials */}
-              <div className="sm:col-span-7 flex flex-col space-y-3 pl-0 sm:pl-2">
-                <div className="p-3.5 rounded bg-[#F7F8F6] border border-[#E5E7E9]">
-                  <span className="text-[10px] font-sans uppercase tracking-[0.24em] text-[#1C6BAE] font-semibold block mb-1">
-                    BESPOKE CRAFTSMANSHIP
+              {/* Architectural Credentials Strip */}
+              <div className="sm:col-span-7 flex flex-col space-y-4 pl-0 sm:pl-3">
+                <div className="border-b border-[#E5E7E9] pb-3.5">
+                  <span className="text-[10px] sm:text-[11px] font-sans uppercase tracking-[0.2em] text-[#1C6BAE] font-semibold block mb-1">
+                    Bespoke Craftsmanship
                   </span>
-                  <p className="text-xs text-[#5F6368] leading-relaxed">
-                    Custom millwork, natural stone curation, and precision architectural fixtures.
+                  <p className="text-xs sm:text-[13px] text-[#5F6368] leading-relaxed font-normal">
+                    Custom architectural millwork, hand-selected natural stone, and precision joinery.
                   </p>
                 </div>
 
-                <div className="p-3.5 rounded bg-[#F7F8F6] border border-[#E5E7E9]">
-                  <span className="text-[10px] font-sans uppercase tracking-[0.24em] text-[#111111] font-semibold block mb-1">
-                    TURNKEY PRECISION
+                <div className="pt-0.5">
+                  <span className="text-[10px] sm:text-[11px] font-sans uppercase tracking-[0.2em] text-[#111111] font-semibold block mb-1">
+                    Turnkey Execution
                   </span>
-                  <p className="text-xs text-[#5F6368] leading-relaxed">
+                  <p className="text-xs sm:text-[13px] text-[#5F6368] leading-relaxed font-normal">
                     Rigorous project scheduling, single-source accountability, and spotless handover.
                   </p>
                 </div>

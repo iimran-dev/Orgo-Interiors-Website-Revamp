@@ -95,16 +95,15 @@ export function Hero({ onOpenConsultation, onOpenVideo }: HeroProps) {
           </div>
 
           {/* Main Display Headline */}
-          <h1 ref={headlineRef} className="font-display text-xl sm:text-3xl md:text-4xl lg:text-[54px] xl:text-[64px] leading-[1.12] text-[#111111] font-medium tracking-tight mb-2 sm:mb-6">
-            Design <br />
-            Beyond Spaces. <br />
+          <h1 ref={headlineRef} className="font-display text-xl sm:text-3xl md:text-4xl lg:text-[50px] xl:text-[58px] leading-[1.1] text-[#111111] font-medium tracking-[-0.02em] mb-2 sm:mb-6">
+            Design Beyond Spaces. <br />
             <span className="italic font-normal text-[#1C6BAE]">
               Architecture for Living.
             </span>
           </h1>
 
           {/* Subtitle Description */}
-          <p ref={paraRef} className="font-sans text-[11px] sm:text-sm lg:text-[16px] text-[#5F6368] leading-relaxed mb-3 sm:mb-8 font-normal line-clamp-3 sm:line-clamp-none max-w-lg">
+          <p ref={paraRef} className="font-sans text-[11px] sm:text-sm lg:text-[15px] text-[#5F6368] leading-[1.65] mb-3 sm:mb-8 font-normal line-clamp-3 sm:line-clamp-none max-w-lg">
             Thoughtfully engineered residential and commercial environments blending architectural rigor, timeless materiality, and bespoke craftsmanship.
           </p>
 
@@ -113,7 +112,7 @@ export function Hero({ onOpenConsultation, onOpenVideo }: HeroProps) {
             {/* Primary CTA */}
             <Link
               href="#projects"
-              className="group relative inline-flex items-center gap-1.5 sm:gap-2.5 px-3 sm:px-6 py-2 sm:py-3.5 rounded bg-[#1C6BAE] hover:bg-[#124B78] text-white text-[10px] sm:text-xs font-medium tracking-wider uppercase shadow-sm transition-all duration-300 active:scale-[0.98]"
+              className="group relative inline-flex items-center gap-1.5 sm:gap-2.5 px-3.5 sm:px-6 py-2 sm:py-3.5 rounded bg-[#1C6BAE] hover:bg-[#124B78] text-white text-[10px] sm:text-xs font-sans font-medium tracking-[0.14em] uppercase shadow-sm transition-all duration-300 active:scale-[0.98]"
             >
               <span>Explore Portfolio</span>
               <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 text-white transition-transform duration-300 group-hover:translate-x-1" />
@@ -122,7 +121,7 @@ export function Hero({ onOpenConsultation, onOpenVideo }: HeroProps) {
             {/* Secondary CTA (Watch Story) */}
             <button
               onClick={onOpenVideo}
-              className="group inline-flex items-center gap-1.5 sm:gap-3 px-2.5 sm:px-4 py-2 sm:py-3 rounded border border-[#111111] bg-transparent text-[#111111] hover:bg-[#111111] hover:text-white transition-all duration-300 text-[10px] sm:text-xs font-sans font-medium"
+              className="group inline-flex items-center gap-1.5 sm:gap-2.5 px-3 sm:px-4 py-2 sm:py-3 rounded border border-[#111111] bg-transparent text-[#111111] hover:bg-[#111111] hover:text-white transition-all duration-300 text-[10px] sm:text-xs font-sans font-medium uppercase tracking-[0.12em]"
               aria-label="Watch Story Video"
             >
               <div className="w-4 h-4 sm:w-5 sm:h-5 rounded-full flex items-center justify-center bg-[#1C6BAE] text-white group-hover:bg-white group-hover:text-[#111111] transition-colors">
@@ -136,7 +135,7 @@ export function Hero({ onOpenConsultation, onOpenVideo }: HeroProps) {
         {/* Bottom Rail: Pagination Indicators & Scroll Cue */}
         <div className="pt-2 sm:pt-6 border-t border-[#E5E7E9] flex items-center justify-between">
           {/* Step numbers: 01, 02, 03 */}
-          <div className="flex items-center gap-2 sm:gap-5 text-[10px] sm:text-xs font-sans tracking-widest text-[#5F6368]">
+          <div className="flex items-center gap-2 sm:gap-5 text-[10px] sm:text-xs font-sans tracking-[0.2em] text-[#5F6368]">
             {["01", "02", "03"].map((step) => (
               <button
                 key={step}
@@ -203,7 +202,7 @@ export function Hero({ onOpenConsultation, onOpenVideo }: HeroProps) {
 
           {/* Interactive Discipline Selector Pill (Bottom-Right) */}
           <div ref={pillRef} className="absolute bottom-2 sm:bottom-6 right-2 sm:right-6 z-20">
-            <div className="bg-[#111111]/95 backdrop-blur-md text-white px-2.5 sm:px-4 py-1 sm:py-2 rounded border border-white/20 shadow-xl flex items-center gap-1.5 sm:gap-3 text-[9px] sm:text-xs font-sans tracking-wide">
+            <div className="bg-[#111111]/95 backdrop-blur-md text-white px-2.5 sm:px-4 py-1 sm:py-2 rounded border border-white/20 shadow-xl flex items-center gap-2 sm:gap-3 text-[10px] sm:text-xs font-sans uppercase tracking-[0.12em]">
               <button
                 onClick={() => setActiveTab("residential")}
                 className={`transition-colors duration-200 ${

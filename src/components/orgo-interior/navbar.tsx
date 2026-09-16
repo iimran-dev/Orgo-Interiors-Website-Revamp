@@ -41,7 +41,7 @@ export function Navbar({ onOpenConsultation }: NavbarProps) {
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-xs lg:text-[13px] font-sans font-medium text-[#111111] tracking-wider hover:text-[#1C6BAE] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-[#1C6BAE] hover:after:w-full after:transition-all after:duration-300 whitespace-nowrap"
+                className="text-[11px] lg:text-xs font-sans font-medium text-[#111111] uppercase tracking-[0.18em] hover:text-[#1C6BAE] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-[#1C6BAE] hover:after:w-full after:transition-all after:duration-300 whitespace-nowrap"
               >
                 {link.label}
               </Link>
@@ -49,11 +49,11 @@ export function Navbar({ onOpenConsultation }: NavbarProps) {
           </nav>
         </div>
 
-        {/* Right Action Button: 5% ORGO Blue Accent */}
+        {/* Right Action Button */}
         <div className="hidden md:flex items-center space-x-4">
           <button
             onClick={onOpenConsultation}
-            className="group relative inline-flex items-center gap-2 px-6 py-2.5 rounded bg-[#1C6BAE] hover:bg-[#124B78] text-white text-xs font-medium tracking-wider shadow-sm hover:shadow transition-all duration-300 active:scale-[0.98]"
+            className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded bg-[#1C6BAE] hover:bg-[#124B78] text-white text-[11px] font-sans font-medium tracking-[0.14em] uppercase shadow-xs hover:shadow transition-all duration-300 active:scale-[0.98]"
           >
             <span>Book a Consultation</span>
             <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
@@ -67,45 +67,53 @@ export function Navbar({ onOpenConsultation }: NavbarProps) {
             className="p-2 rounded text-[#111111] hover:bg-[#F7F8F6] transition-colors"
             aria-label="Toggle navigation menu"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </div>
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-b border-[#E5E7E9] px-6 py-6 space-y-4 shadow-xl animate-in slide-in-from-top duration-300">
-          <div className="flex flex-col space-y-3">
+        <div className="md:hidden bg-white/98 backdrop-blur-lg border-b border-[#E5E7E9] px-6 py-6 shadow-2xl animate-in slide-in-from-top-2 duration-300">
+          <div className="flex items-center gap-2 mb-4 pb-2 border-b border-[#E5E7E9]">
+            <span className="h-px w-5 bg-[#1C6BAE]" />
+            <span className="text-[10px] font-sans uppercase tracking-[0.22em] text-[#1C6BAE] font-semibold">
+              Studio Navigation
+            </span>
+          </div>
+
+          <div className="flex flex-col space-y-1">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-base font-medium text-[#111111] hover:text-[#1C6BAE] transition-colors py-2 border-b border-[#E5E7E9]"
+                className="text-sm font-sans font-medium uppercase tracking-[0.14em] text-[#111111] hover:text-[#1C6BAE] transition-colors py-2.5 flex items-center justify-between border-b border-[#E5E7E9]/50"
               >
-                {link.label}
+                <span>{link.label}</span>
+                <ArrowRight className="w-3.5 h-3.5 text-[#1C6BAE]" />
               </Link>
             ))}
           </div>
 
-          <div className="pt-2 flex flex-col gap-2.5">
+          <div className="pt-4 flex flex-col gap-2.5">
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
                 onOpenConsultation();
               }}
-              className="w-full flex items-center justify-center gap-2 py-3 rounded bg-[#1C6BAE] hover:bg-[#124B78] text-white text-xs font-medium tracking-wider uppercase shadow transition-colors"
+              className="w-full flex items-center justify-center gap-2 py-3 rounded bg-[#1C6BAE] hover:bg-[#124B78] text-white text-[11px] font-sans font-medium tracking-[0.14em] uppercase shadow transition-colors"
             >
-              <span>Book a Consultation</span>
+              <span>Book an Atelier Consultation</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </button>
 
             <a
               href="tel:+919585544446"
-              className="w-full flex items-center justify-center gap-2 py-2.5 rounded border border-[#E5E7E9] text-xs font-medium text-[#111111] hover:border-[#1C6BAE] hover:text-[#1C6BAE] transition-colors"
+              className="w-full flex items-center justify-center gap-2 py-2.5 rounded border border-[#E5E7E9] text-[11px] font-sans font-medium text-[#111111] hover:border-[#1C6BAE] hover:text-[#1C6BAE] transition-colors"
             >
               <Phone className="w-3.5 h-3.5 text-[#1C6BAE]" />
-              <span>+91 95855 44446</span>
+              <span>Direct Studio: +91 95855 44446</span>
             </a>
           </div>
         </div>
