@@ -98,7 +98,7 @@ export const PROJECTS: ProjectItem[] = [
     category: "Residential",
     scope: "Complete Turnkey Architectural Interior",
     area: "5,400 sq.ft",
-    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=85&w=1400&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=85&w=1200&auto=format&fit=crop",
     featured: true,
   },
   {
@@ -108,7 +108,7 @@ export const PROJECTS: ProjectItem[] = [
     category: "Residential",
     scope: "Architectural Living & Dining Pavilion",
     area: "6,200 sq.ft",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1200&auto=format&fit=crop",
   },
   {
     id: "coastal-penthouse",
@@ -126,7 +126,7 @@ export const PROJECTS: ProjectItem[] = [
     category: "Living",
     scope: "Fluted Wood Wall & Formal Seating",
     area: "2,900 sq.ft",
-    image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?q=80&w=1200&auto=format&fit=crop",
   },
   {
     id: "monolithic-kitchen",
@@ -135,7 +135,7 @@ export const PROJECTS: ProjectItem[] = [
     category: "Kitchens",
     scope: "Monolithic Quartz Island & Oak Millwork",
     area: "850 sq.ft",
-    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?q=80&w=1200&auto=format&fit=crop",
   },
   {
     id: "nordic-culinary",
@@ -144,7 +144,7 @@ export const PROJECTS: ProjectItem[] = [
     category: "Kitchens",
     scope: "Cove Illumination & Custom Cabinetry",
     area: "720 sq.ft",
-    image: "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=1200&auto=format&fit=crop",
   },
   {
     id: "sanctuary-suite",

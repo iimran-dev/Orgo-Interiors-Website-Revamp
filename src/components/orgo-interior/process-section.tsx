@@ -28,17 +28,19 @@ export function ProcessSection() {
         {/* 5-Step Responsive Flow */}
         <div
           data-animate="stagger-group"
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-6 lg:gap-5 relative"
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-6 lg:gap-5 relative"
         >
           {PROCESS_STEPS.map((item, index) => (
             <div
               key={item.step}
               data-animate="stagger-item"
-              className="flex flex-col relative group bg-white/5 lg:bg-transparent p-5 lg:p-0 rounded lg:rounded-none border border-white/10 lg:border-none shadow-none hover:-translate-y-1 transition-transform duration-300"
+              className={`flex flex-col relative group bg-white/5 lg:bg-transparent p-3.5 sm:p-5 lg:p-0 rounded lg:rounded-none border border-white/10 lg:border-none shadow-none hover:-translate-y-1 transition-transform duration-300 ${
+                index === 4 ? "col-span-2 sm:col-span-1" : ""
+              }`}
             >
               {/* Top Row: Step Number & Connector Arrow */}
-              <div className="flex items-center justify-between mb-4 sm:mb-5">
-                <span className="font-display text-4xl sm:text-5xl font-semibold text-[#1C6BAE] group-hover:scale-105 transition-all duration-300 tracking-tight">
+              <div className="flex items-center justify-between mb-2 sm:mb-5">
+                <span className="font-display text-3xl sm:text-5xl font-semibold text-[#1C6BAE] group-hover:scale-105 transition-all duration-300 tracking-tight">
                   {item.step}
                 </span>
 
@@ -52,10 +54,10 @@ export function ProcessSection() {
               </div>
 
               {/* Title & Description */}
-              <h3 className="font-display text-base sm:text-lg font-medium text-white group-hover:text-[#1C6BAE] transition-colors mb-2 tracking-wide">
+              <h3 className="font-display text-sm sm:text-lg font-medium text-white group-hover:text-[#1C6BAE] transition-colors mb-1 sm:mb-2 tracking-wide">
                 {item.title}
               </h3>
-              <p className="font-sans text-xs sm:text-sm text-[#D9E3EA] font-normal leading-relaxed">
+              <p className="font-sans text-[11px] sm:text-sm text-[#D9E3EA] font-normal leading-relaxed line-clamp-3 sm:line-clamp-none">
                 {item.description}
               </p>
             </div>

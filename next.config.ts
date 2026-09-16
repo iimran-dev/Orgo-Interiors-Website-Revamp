@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 // Configured base path for static hosting (e.g. GitHub Pages or subdirectory)
 // Can be customized via NEXT_PUBLIC_BASE_PATH environment variable
-const basePath = (process.env.NEXT_PUBLIC_BASE_PATH ?? "/honeycraft").replace(/\/$/, "");
+const basePath = (process.env.NEXT_PUBLIC_BASE_PATH ?? "/orgo-interiors").replace(/\/$/, "");
 
 const nextConfig: NextConfig = {
   output: "export",

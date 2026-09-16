@@ -13,10 +13,10 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Main Footer Columns */}
-        <div data-animate="fade-up" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-10 gap-10 lg:gap-8 mb-12 sm:mb-14">
+        <div data-animate="fade-up" className="grid grid-cols-2 lg:grid-cols-10 gap-8 lg:gap-8 mb-12 sm:mb-14">
           
-          {/* Col 1: Brand & Slogan (3 cols) */}
-          <div className="lg:col-span-3 flex flex-col items-start">
+          {/* Col 1: Brand & Slogan (2 cols on mobile, 3 cols on desktop) */}
+          <div className="col-span-2 lg:col-span-3 flex flex-col items-start">
             {/* Official Logo mounted on a clean architectural off-white panel */}
             <div className="bg-[#F7F8F6] px-3.5 py-2 rounded border border-white/20 inline-flex items-center mb-4 shadow-sm">
               <Logo size="md" className="!items-start" />
@@ -30,8 +30,8 @@ export function Footer() {
             </span>
           </div>
 
-          {/* Col 2: Quick Links (2 cols) */}
-          <div className="lg:col-span-2">
+          {/* Col 2: Quick Links (1 col on mobile, 2 cols on desktop) */}
+          <div className="col-span-1 lg:col-span-2">
             <h4 className="font-display text-xs font-semibold text-white uppercase tracking-[0.2em] mb-4">
               Navigation
             </h4>
@@ -64,8 +64,8 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Col 3: Our Disciplines (2 cols) */}
-          <div className="lg:col-span-2">
+          {/* Col 3: Our Disciplines (1 col on mobile, 2 cols on desktop) */}
+          <div className="col-span-1 lg:col-span-2">
             <h4 className="font-display text-xs font-semibold text-white uppercase tracking-[0.2em] mb-4">
               Disciplines
             </h4>
@@ -98,8 +98,8 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Col 4: Contact Us (3 cols) */}
-          <div className="lg:col-span-3">
+          {/* Col 4: Contact Us (2 cols on mobile, 3 cols on desktop) */}
+          <div className="col-span-2 lg:col-span-3">
             <h4 className="font-display text-xs font-semibold text-white uppercase tracking-[0.2em] mb-4">
               Studio & Contact
             </h4>

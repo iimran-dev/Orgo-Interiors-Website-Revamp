@@ -29,36 +29,36 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
           </h2>
         </div>
 
-        {/* 4 Cards Grid - Aligned & Responsive */}
+        {/* 4 Cards Grid - Aligned & Responsive (2-col on mobile, 4-col on desktop) */}
         <div
           data-animate="stagger-group"
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6 lg:gap-7"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 lg:gap-7"
         >
           {SERVICES.map((service) => (
             <div
               key={service.id}
               data-animate="stagger-item"
-              className="group relative flex flex-col justify-between bg-white rounded p-3 sm:p-3.5 border border-[#E5E7E9] hover:border-[#1C6BAE] shadow-none hover:shadow-md transition-all duration-400 hover:-translate-y-1 overflow-hidden"
+              className="group relative flex flex-col justify-between bg-white rounded p-2 sm:p-3.5 border border-[#E5E7E9] hover:border-[#1C6BAE] shadow-none hover:shadow-md transition-all duration-400 hover:-translate-y-1 overflow-hidden"
             >
               {/* Card Image Container */}
-              <div className="relative aspect-[4/3] w-full rounded-sm overflow-hidden mb-4 bg-[#F7F8F6]">
+              <div className="relative aspect-[4/3] w-full rounded-sm overflow-hidden mb-2.5 sm:mb-4 bg-[#F7F8F6]">
                 <Image
                   src={service.image}
                   alt={service.title}
                   fill
                   className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
 
               {/* Card Footer: Aligned Titles, Subtitles & Button */}
-              <div className="px-2 pb-2 flex items-center justify-between gap-3 min-h-[58px]">
+              <div className="px-1 sm:px-2 pb-1 sm:pb-2 flex items-center justify-between gap-1.5 sm:gap-3 min-h-[46px] sm:min-h-[58px]">
                 <div className="flex-1">
-                  <h3 className="font-display text-base sm:text-lg font-medium text-[#111111] group-hover:text-[#1C6BAE] transition-colors leading-snug">
+                  <h3 className="font-display text-xs sm:text-lg font-medium text-[#111111] group-hover:text-[#1C6BAE] transition-colors leading-snug">
                     {service.title}
                   </h3>
-                  <p className="font-sans text-xs text-[#5F6368] font-normal mt-1 leading-snug line-clamp-2">
+                  <p className="font-sans text-[10px] sm:text-xs text-[#5F6368] font-normal mt-0.5 sm:mt-1 leading-tight sm:leading-snug line-clamp-2">
                     {service.description}
                   </p>
                 </div>
@@ -66,10 +66,10 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
                 {/* Arrow Action Button with moderate radius */}
                 <button
                   onClick={() => onSelectService?.(service.title)}
-                  className="w-9 h-9 rounded border border-[#E5E7E9] bg-white flex items-center justify-center text-[#111111] group-hover:border-[#1C6BAE] group-hover:bg-[#1C6BAE] group-hover:text-white transition-all duration-300 flex-shrink-0"
+                  className="w-7 h-7 sm:w-9 sm:h-9 rounded border border-[#E5E7E9] bg-white flex items-center justify-center text-[#111111] group-hover:border-[#1C6BAE] group-hover:bg-[#1C6BAE] group-hover:text-white transition-all duration-300 flex-shrink-0"
                   aria-label={`View details for ${service.title}`}
                 >
-                  <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-[-45deg]" />
+                  <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 transition-transform duration-300 group-hover:rotate-[-45deg]" />
                 </button>
               </div>
 
