@@ -31,7 +31,13 @@ export function Hero({ onOpenConsultation, onOpenVideo }: HeroProps) {
   const wallTextRef = useRef<HTMLDivElement>(null);
   const pillRef = useRef<HTMLDivElement>(null);
 
-  const heroImage = "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=85&w=1600&auto=format&fit=crop";
+  const HERO_IMAGES = {
+    residential: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=85&w=1600&auto=format&fit=crop",
+    commercial: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=85&w=1600&auto=format&fit=crop",
+    turnkey: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=85&w=1600&auto=format&fit=crop",
+  };
+
+  const currentHeroImage = HERO_IMAGES[activeTab];
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -158,44 +164,46 @@ export function Hero({ onOpenConsultation, onOpenVideo }: HeroProps) {
       </div>
 
       {/* ================= RIGHT ARCHITECTURAL LIVING ROOM COLUMN ================= */}
-      <div className="w-full lg:w-[47%] relative min-h-[480px] sm:min-h-[580px] lg:min-h-full flex items-stretch overflow-hidden">
+      <div className="w-full lg:w-[47%] relative min-h-[480px] sm:min-h-[580px] lg:min-h-full flex items-stretch p-4 sm:p-6 lg:p-8 lg:pl-0">
         
-        {/* Grand Sweeping Architectural Frame */}
+        {/* Modern Clean Architectural Frame */}
         <div
           ref={archRef}
-          className="relative w-full h-full lg:rounded-tl-[320px] overflow-hidden border-t-2 lg:border-t-0 lg:border-l border-[#E5E7E9] shadow-xl bg-white"
+          className="relative w-full h-full rounded-xl sm:rounded-2xl overflow-hidden border border-[#E5E7E9] shadow-xl bg-white"
         >
           
           {/* Parallax Image Wrapper */}
           <div ref={imageRef} className="absolute -top-10 -bottom-10 inset-x-0 w-full h-[115%]">
             <Image
-              src={heroImage}
-              alt="ORGO Interiors Luxury Living Architecture Showcase"
+              src={currentHeroImage}
+              alt="ORGO Interiors Luxury Architectural Showcase"
               fill
               priority
-              className="object-cover object-center scale-100 lg:scale-[1.02] hover:scale-105 transition-transform duration-1000 ease-out"
+              className="object-cover object-center transition-all duration-700 ease-out"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
 
-          {/* Delicate Warm Ambient Lighting Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/15 pointer-events-none" />
-
-          {/* Wall Badge Text: SPACES PEOPLE LOVE LIVING IN */}
+          {/* Clean High-Contrast Corner Badge */}
           <div
             ref={wallTextRef}
-            className="absolute top-44 sm:top-52 lg:top-64 xl:top-72 right-6 sm:right-10 z-20 pointer-events-none select-none text-right"
+            className="absolute top-5 left-5 z-20"
           >
-            <div className="flex flex-col space-y-1 text-xs sm:text-[13px] font-sans font-semibold tracking-[0.26em] text-white/95 uppercase drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
-              <span>TIMELESS</span>
-              <span>ARCHITECTURAL</span>
-              <span className="text-[#1C6BAE] bg-white/90 px-1.5 py-0.5 rounded-sm">INTERIORS</span>
+            <div className="bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded shadow-sm border border-black/5 inline-flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#1C6BAE] animate-pulse" />
+              <span className="text-[11px] font-sans font-semibold tracking-widest text-[#111111] uppercase">
+                {activeTab === "residential"
+                  ? "Bespoke Residence · Poes Garden"
+                  : activeTab === "commercial"
+                  ? "Executive Atelier · OMR"
+                  : "Turnkey Architecture · South India"}
+              </span>
             </div>
           </div>
 
-          {/* Category Selector Pill (Bottom-Right) */}
-          <div ref={pillRef} className="absolute bottom-6 sm:bottom-8 right-6 sm:right-10 z-20">
-            <div className="bg-[#111111]/90 backdrop-blur-md text-white px-5 py-2.5 rounded border border-white/15 shadow-xl flex items-center gap-3 sm:gap-4 text-xs font-sans tracking-wide">
+          {/* Interactive Discipline Selector Pill (Bottom-Right) */}
+          <div ref={pillRef} className="absolute bottom-5 sm:bottom-6 right-5 sm:right-6 z-20">
+            <div className="bg-[#111111]/95 backdrop-blur-md text-white px-4 py-2 rounded border border-white/20 shadow-2xl flex items-center gap-3 text-xs font-sans tracking-wide">
               <button
                 onClick={() => setActiveTab("residential")}
                 className={`transition-colors duration-200 ${
@@ -206,7 +214,7 @@ export function Hero({ onOpenConsultation, onOpenVideo }: HeroProps) {
               >
                 Residential
               </button>
-              <span className="text-white/30">|</span>
+              <span className="text-white/20">|</span>
               <button
                 onClick={() => setActiveTab("commercial")}
                 className={`transition-colors duration-200 ${
@@ -217,7 +225,7 @@ export function Hero({ onOpenConsultation, onOpenVideo }: HeroProps) {
               >
                 Commercial
               </button>
-              <span className="text-white/30">|</span>
+              <span className="text-white/20">|</span>
               <button
                 onClick={() => setActiveTab("turnkey")}
                 className={`transition-colors duration-200 ${
@@ -226,7 +234,7 @@ export function Hero({ onOpenConsultation, onOpenVideo }: HeroProps) {
                     : "text-white/70 hover:text-white"
                 }`}
               >
-                Turnkey Atelier
+                Turnkey
               </button>
             </div>
           </div>

@@ -4,6 +4,8 @@ export interface ProjectItem {
   location?: string;
   category: "Residential" | "Commercial" | "Kitchens" | "Living" | "Bedrooms";
   image: string;
+  scope?: string;
+  area?: string;
   featured?: boolean;
 }
 
@@ -72,7 +74,7 @@ export const SERVICES: ServiceItem[] = [
     id: "modular-kitchens",
     title: "Architectural Kitchens",
     description: "Precision joinery, monolithic natural stone islands, and ergonomic culinary layouts.",
-    image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=1000&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1000&auto=format&fit=crop",
   },
   {
     id: "wardrobes",
@@ -94,7 +96,9 @@ export const PROJECTS: ProjectItem[] = [
     title: "The Pavilion Residence",
     location: "Poes Garden, Chennai",
     category: "Residential",
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1400&auto=format&fit=crop",
+    scope: "Complete Turnkey Architectural Interior",
+    area: "5,400 sq.ft",
+    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=85&w=1400&auto=format&fit=crop",
     featured: true,
   },
   {
@@ -102,63 +106,81 @@ export const PROJECTS: ProjectItem[] = [
     title: "Minimalist Monolith Villa",
     location: "Boat Club Road, Chennai",
     category: "Residential",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1000&auto=format&fit=crop",
+    scope: "Architectural Living & Dining Pavilion",
+    area: "6,200 sq.ft",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
   },
   {
     id: "coastal-penthouse",
     title: "East Coast Penthouse",
     location: "ECR, Chennai",
     category: "Living",
-    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1000&auto=format&fit=crop",
+    scope: "Ribbed Oak Living & Ocean Lounge",
+    area: "3,800 sq.ft",
+    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200&auto=format&fit=crop",
   },
   {
     id: "harrington-lounge",
     title: "Courtyard Residence Lounge",
     location: "Chetpet, Chennai",
     category: "Living",
-    image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1000&auto=format&fit=crop",
+    scope: "Fluted Wood Wall & Formal Seating",
+    area: "2,900 sq.ft",
+    image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1200&auto=format&fit=crop",
   },
   {
     id: "monolithic-kitchen",
     title: "Travertine Culinary Studio",
     location: "Boat Club Road, Chennai",
     category: "Kitchens",
-    image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=1000&auto=format&fit=crop",
+    scope: "Monolithic Quartz Island & Oak Millwork",
+    area: "850 sq.ft",
+    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1200&auto=format&fit=crop",
   },
   {
     id: "nordic-culinary",
-    title: "Oak & Quartz Kitchen",
+    title: "Marble & Bronze Kitchen",
     location: "Nungambakkam, Chennai",
     category: "Kitchens",
-    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1000&auto=format&fit=crop",
+    scope: "Cove Illumination & Custom Cabinetry",
+    area: "720 sq.ft",
+    image: "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=1200&auto=format&fit=crop",
   },
   {
     id: "sanctuary-suite",
     title: "Minimalist Master Suite",
     location: "Adyar, Chennai",
     category: "Bedrooms",
-    image: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?q=80&w=1000&auto=format&fit=crop",
+    scope: "Timber Slat Headboard & Dressing Suite",
+    area: "1,200 sq.ft",
+    image: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?q=80&w=1200&auto=format&fit=crop",
   },
   {
     id: "bespoke-bedroom",
-    title: "Linen & Oak Guest Chamber",
+    title: "Serene Linen Guest Chamber",
     location: "Alwarpet, Chennai",
     category: "Bedrooms",
-    image: "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=80&w=1000&auto=format&fit=crop",
+    scope: "Full-Height Glazing & Oak Detailing",
+    area: "950 sq.ft",
+    image: "https://images.unsplash.com/photo-1617325247661-675ab4b64ae2?q=80&w=1200&auto=format&fit=crop",
   },
   {
     id: "headquarters-studio",
     title: "Executive Design Atelier",
     location: "OMR, Chennai",
     category: "Commercial",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1000&auto=format&fit=crop",
+    scope: "Architectural Studio & Materials Library",
+    area: "4,500 sq.ft",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop",
   },
   {
     id: "private-equity-office",
     title: "Boardroom & Partner Suite",
     location: "Guindy, Chennai",
     category: "Commercial",
-    image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1000&auto=format&fit=crop",
+    scope: "Acoustic Millwork & Executive Lounge",
+    area: "3,200 sq.ft",
+    image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1200&auto=format&fit=crop",
   },
 ];
 

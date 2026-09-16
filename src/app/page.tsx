@@ -1,20 +1,20 @@
 "use client";
 
 import React, { useState } from "react";
-import { Navbar } from "@/components/ag-interior/navbar";
-import { Hero } from "@/components/ag-interior/hero";
-import { StatsBar } from "@/components/ag-interior/stats-bar";
-import { AboutSection } from "@/components/ag-interior/about-section";
-import { ServicesSection } from "@/components/ag-interior/services-section";
-import { BeforeAfterSection } from "@/components/ag-interior/before-after-section";
-import { FeaturedProjects } from "@/components/ag-interior/featured-projects";
-import { ProcessSection } from "@/components/ag-interior/process-section";
-import { TestimonialsSection } from "@/components/ag-interior/testimonials-section";
-import { DreamSpaceCTA } from "@/components/ag-interior/dream-space-cta";
-import { Footer } from "@/components/ag-interior/footer";
-import { MotionWrapper } from "@/components/ag-interior/motion-wrapper";
-import { ConsultationModal } from "@/components/ag-interior/consultation-modal";
-import { VideoModal } from "@/components/ag-interior/video-modal";
+import { Navbar } from "@/components/orgo-interior/navbar";
+import { Hero } from "@/components/orgo-interior/hero";
+import { StatsBar } from "@/components/orgo-interior/stats-bar";
+import { AboutSection } from "@/components/orgo-interior/about-section";
+import { ServicesSection } from "@/components/orgo-interior/services-section";
+import { BeforeAfterSection } from "@/components/orgo-interior/before-after-section";
+import { FeaturedProjects } from "@/components/orgo-interior/featured-projects";
+import { ProcessSection } from "@/components/orgo-interior/process-section";
+import { TestimonialsSection } from "@/components/orgo-interior/testimonials-section";
+import { DreamSpaceCTA } from "@/components/orgo-interior/dream-space-cta";
+import { Footer } from "@/components/orgo-interior/footer";
+import { MotionWrapper } from "@/components/orgo-interior/motion-wrapper";
+import { ConsultationModal } from "@/components/orgo-interior/consultation-modal";
+import { VideoModal } from "@/components/orgo-interior/video-modal";
 
 export default function Home() {
   const [consultationOpen, setConsultationOpen] = useState(false);

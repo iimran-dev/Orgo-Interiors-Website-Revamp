@@ -13,7 +13,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Main Footer Columns */}
-        <div data-animate="fade-up" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-12 sm:mb-14">
+        <div data-animate="fade-up" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-10 gap-10 lg:gap-8 mb-12 sm:mb-14">
           
           {/* Col 1: Brand & Slogan (3 cols) */}
           <div className="lg:col-span-3 flex flex-col items-start">
@@ -163,35 +163,6 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Col 5: Architectural Photo & Cadence (2 cols) */}
-          <div className="lg:col-span-2 flex items-center gap-4 sm:col-span-2 lg:justify-end">
-            {/* Architectural small frame */}
-            <div
-              data-animate="arch-reveal"
-              className="relative w-20 sm:w-24 h-32 sm:h-36 rounded overflow-hidden border border-white/20 shadow-none flex-shrink-0 bg-[#0E3352]"
-            >
-              <Image
-                src={archImage}
-                alt="Architectural Material Vignette"
-                fill
-                className="object-cover object-center"
-                sizes="120px"
-              />
-            </div>
-
-            {/* Architectural Cadence */}
-            <div className="flex flex-col space-y-1">
-              <span className="font-display text-sm uppercase tracking-[0.24em] text-[#1C6BAE] font-medium leading-none">
-                Design
-              </span>
-              <span className="font-display text-sm uppercase tracking-[0.24em] text-white font-medium leading-none">
-                Refine
-              </span>
-              <span className="font-display text-sm uppercase tracking-[0.24em] text-[#1C6BAE] font-medium leading-none">
-                Deliver
-              </span>
-            </div>
-          </div>
 
         </div>
 
