@@ -45,15 +45,15 @@ export function ConsultationModal({ isOpen, onClose }: ConsultationModalProps) {
           <DialogHeader className="mb-6">
             <div className="flex items-center gap-2 mb-2">
               <span className="h-px w-6 bg-[#1C6BAE]" />
-              <span className="text-[11px] font-sans uppercase tracking-[0.24em] text-[#1C6BAE] font-semibold">
+              <span className="text-[10px] sm:text-[11px] font-sans uppercase tracking-[0.22em] text-[#1C6BAE] font-semibold">
                 ORGO Interiors Experience
               </span>
             </div>
-            <DialogTitle className="font-display text-2xl sm:text-3xl text-[#111111] font-medium tracking-tight">
+            <DialogTitle className="font-display text-2xl sm:text-3xl text-[#111111] font-medium tracking-[-0.015em]">
               Book an Atelier Consultation
             </DialogTitle>
-            <DialogDescription className="text-sm text-[#5F6368] font-sans mt-1">
-              Discuss your spatial vision, architectural requirements, and material preferences with our design team.
+            <DialogDescription className="text-xs sm:text-sm text-[#5F6368] font-sans mt-1 leading-relaxed">
+              Discuss your spatial vision, architectural requirements, and material preferences with our principal design team.
             </DialogDescription>
           </DialogHeader>
 
@@ -88,7 +88,7 @@ export function ConsultationModal({ isOpen, onClose }: ConsultationModalProps) {
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 <div>
-                  <label className="block text-xs font-medium text-[#111111] mb-1">
+                  <label className="block text-[10px] sm:text-[11px] font-sans uppercase tracking-[0.16em] font-semibold text-[#111111] mb-1.5">
                     Your Name *
                   </label>
                   <input
@@ -101,7 +101,7 @@ export function ConsultationModal({ isOpen, onClose }: ConsultationModalProps) {
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-[#111111] mb-1">
+                  <label className="block text-[10px] sm:text-[11px] font-sans uppercase tracking-[0.16em] font-semibold text-[#111111] mb-1.5">
                     Phone Number *
                   </label>
                   <input
@@ -117,7 +117,7 @@ export function ConsultationModal({ isOpen, onClose }: ConsultationModalProps) {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 <div>
-                  <label className="block text-xs font-medium text-[#111111] mb-1">
+                  <label className="block text-[10px] sm:text-[11px] font-sans uppercase tracking-[0.16em] font-semibold text-[#111111] mb-1.5">
                     Project Type
                   </label>
                   <select
@@ -133,7 +133,7 @@ export function ConsultationModal({ isOpen, onClose }: ConsultationModalProps) {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-[#111111] mb-1">
+                  <label className="block text-[10px] sm:text-[11px] font-sans uppercase tracking-[0.16em] font-semibold text-[#111111] mb-1.5">
                     Location / City
                   </label>
                   <input
@@ -147,7 +147,7 @@ export function ConsultationModal({ isOpen, onClose }: ConsultationModalProps) {
               </div>
 
               <div>
-                <label className="block text-xs font-medium text-[#111111] mb-1">
+                <label className="block text-[10px] sm:text-[11px] font-sans uppercase tracking-[0.16em] font-semibold text-[#111111] mb-1.5">
                   Brief Requirements / Spatial Notes (Optional)
                 </label>
                 <textarea
@@ -162,7 +162,7 @@ export function ConsultationModal({ isOpen, onClose }: ConsultationModalProps) {
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full py-3.5 px-6 rounded bg-[#1C6BAE] hover:bg-[#124B78] text-white font-medium text-xs tracking-wider uppercase flex items-center justify-center gap-2 transition-colors shadow-sm active:scale-[0.99]"
+                  className="w-full py-3 sm:py-3.5 px-6 rounded bg-[#1C6BAE] hover:bg-[#124B78] text-white font-sans font-medium text-xs tracking-[0.14em] uppercase flex items-center justify-center gap-2 transition-colors shadow-sm active:scale-[0.99]"
                 >
                   Confirm Atelier Consultation
                   <ArrowRight className="w-4 h-4" />

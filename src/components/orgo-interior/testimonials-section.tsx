@@ -28,15 +28,15 @@ export function TestimonialsSection() {
           <div data-animate="fade-up" className="lg:col-span-4 xl:col-span-4">
             
             {/* Kicker */}
-            <div className="flex items-center gap-2 mb-3">
-              <span className="h-px w-6 bg-[#1C6BAE]" />
-              <span className="text-[11px] font-sans uppercase tracking-[0.24em] text-[#1C6BAE] font-semibold">
+            <div className="flex items-center gap-2 mb-2 sm:mb-3">
+              <span className="h-px w-6 sm:w-7 bg-[#1C6BAE]" />
+              <span className="text-[10px] sm:text-[11px] font-sans uppercase tracking-[0.22em] text-[#1C6BAE] font-semibold">
                 Client Perspectives
               </span>
             </div>
 
             {/* Headline */}
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-[42px] leading-tight text-[#111111] font-medium tracking-tight mb-6 sm:mb-8">
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-[40px] xl:text-[42px] leading-[1.14] text-[#111111] font-medium tracking-[-0.015em] mb-6 sm:mb-8">
               Spaces Designed. <br />
               Lives Enriched.
             </h2>
@@ -45,7 +45,7 @@ export function TestimonialsSection() {
             <div className="flex items-center gap-2.5">
               <button
                 onClick={handlePrev}
-                className="w-10 h-10 rounded border border-[#E5E7E9] bg-white flex items-center justify-center text-[#111111] hover:border-[#1C6BAE] hover:bg-[#1C6BAE] hover:text-white transition-all duration-300 active:scale-95 shadow-none"
+                className="w-10 h-10 rounded border border-[#E5E7E9] bg-white flex items-center justify-center text-[#111111] hover:border-[#1C6BAE] hover:bg-[#1C6BAE] hover:text-white transition-all duration-300 active:scale-95 shadow-xs"
                 aria-label="Previous client testimonial"
               >
                 <ArrowLeft className="w-4 h-4" />
@@ -53,7 +53,7 @@ export function TestimonialsSection() {
 
               <button
                 onClick={handleNext}
-                className="w-10 h-10 rounded border border-[#E5E7E9] bg-white flex items-center justify-center text-[#111111] hover:border-[#1C6BAE] hover:bg-[#1C6BAE] hover:text-white transition-all duration-300 active:scale-95 shadow-none"
+                className="w-10 h-10 rounded border border-[#E5E7E9] bg-white flex items-center justify-center text-[#111111] hover:border-[#1C6BAE] hover:bg-[#1C6BAE] hover:text-white transition-all duration-300 active:scale-95 shadow-xs"
                 aria-label="Next client testimonial"
               >
                 <ArrowRight className="w-4 h-4" />
@@ -66,11 +66,16 @@ export function TestimonialsSection() {
           <div data-animate="fade-up" className="lg:col-span-8 xl:col-span-8 grid grid-cols-1 sm:grid-cols-12 gap-6 items-stretch">
             
             {/* Testimonial Quote Card */}
-            <div className="sm:col-span-7 bg-[#F7F8F6] rounded p-6 sm:p-8 border border-[#E5E7E9] shadow-none relative flex flex-col justify-between min-h-[260px] overflow-hidden">
+            <div className="sm:col-span-7 bg-[#F7F8F6] rounded p-6 sm:p-8 border border-[#E5E7E9] shadow-xs relative flex flex-col justify-between min-h-[270px] overflow-hidden">
               
-              {/* Top Quote Mark Icon */}
-              <div className="text-4xl sm:text-5xl font-display text-[#1C6BAE] leading-none select-none">
-                “
+              {/* Top Index Indicator */}
+              <div className="flex items-center justify-between">
+                <span className="text-3xl sm:text-4xl font-display text-[#1C6BAE] leading-none select-none">
+                  “
+                </span>
+                <span className="text-[10px] font-sans font-semibold uppercase tracking-[0.2em] text-[#5F6368]">
+                  0{currentIndex + 1} / 0{TESTIMONIALS.length}
+                </span>
               </div>
 
               {/* Animated Quote and Author */}
@@ -83,10 +88,10 @@ export function TestimonialsSection() {
                   transition={{ duration: 0.35, ease: "easeOut" }}
                   className="flex flex-col justify-between flex-1"
                 >
-                  {/* Quote text */}
-                  <p className="font-sans text-sm sm:text-base text-[#111111] font-normal leading-relaxed my-4 min-h-[72px]">
-                    {current.quote}
-                  </p>
+                  {/* Monograph Editorial Serif Quote */}
+                  <blockquote className="font-display italic text-base sm:text-lg lg:text-[21px] text-[#111111] font-normal leading-relaxed my-4 min-h-[80px]">
+                    “{current.quote}”
+                  </blockquote>
 
                   {/* Author & Location */}
                   <div className="flex items-center gap-3 pt-3 border-t border-[#E5E7E9]">
@@ -100,16 +105,16 @@ export function TestimonialsSection() {
                       />
                     </div>
                     <div>
-                      <h4 className="font-display text-sm font-semibold text-[#111111]">
+                      <h4 className="font-sans text-xs sm:text-sm font-semibold text-[#111111] tracking-normal">
                         {current.name}
                       </h4>
-                      <p className="font-sans text-xs text-[#5F6368] font-normal">
+                      <p className="font-sans text-[11px] sm:text-xs text-[#5F6368] font-normal">
                         {current.location}
                       </p>
                     </div>
 
                     {/* Closing quote mark in bottom right */}
-                    <div className="ml-auto text-3xl font-display text-[#1C6BAE]/40 leading-none select-none">
+                    <div className="ml-auto text-3xl font-display text-[#1C6BAE]/30 leading-none select-none">
                       ”
                     </div>
                   </div>

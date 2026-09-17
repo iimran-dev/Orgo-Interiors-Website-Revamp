@@ -48,18 +48,18 @@ export const STATS = [
   },
   {
     value: "100%",
-    label: "Bespoke Architectural Plans",
+    label: "Bespoke Joinery",
     icon: "compass",
   },
   {
-    value: "Turnkey",
-    label: "Execution & Oversight",
-    icon: "refresh",
+    value: "15+",
+    label: "Years Atelier Craft",
+    icon: "award",
   },
   {
-    value: "Chennai Studio",
-    label: "Serving Across South India",
-    icon: "mapPin",
+    value: "5.0★",
+    label: "Client Rating",
+    icon: "star",
   },
 ];
 

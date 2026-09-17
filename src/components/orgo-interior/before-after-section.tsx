@@ -53,21 +53,21 @@ export function BeforeAfterSection() {
           <div data-animate="fade-up" className="lg:col-span-4 xl:col-span-4">
             
             {/* Kicker */}
-            <div className="flex items-center gap-2.5 mb-3 sm:mb-4">
-              <span className="h-px w-7 bg-[#1C6BAE]" />
-              <span className="text-[11px] font-sans uppercase tracking-[0.24em] text-[#1C6BAE] font-semibold">
+            <div className="flex items-center gap-2 mb-2 sm:mb-3">
+              <span className="h-px w-6 sm:w-7 bg-[#1C6BAE]" />
+              <span className="text-[10px] sm:text-[11px] font-sans uppercase tracking-[0.22em] text-[#1C6BAE] font-semibold">
                 Spatial Transformation
               </span>
             </div>
 
             {/* Headline */}
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-[42px] leading-[1.16] font-medium tracking-tight mb-4 sm:mb-5 text-white">
-              See the Transformation <br />
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-[40px] xl:text-[42px] leading-[1.14] font-medium tracking-tight mb-3 sm:mb-5 text-white">
+              See the Transformation <br className="hidden sm:inline" />
               Before It Happens.
             </h2>
 
             {/* Subtitle */}
-            <p className="font-sans text-[#D9E3EA] text-sm sm:text-base leading-relaxed mb-6 sm:mb-8 font-normal">
+            <p className="font-sans text-[#D9E3EA] text-xs sm:text-sm lg:text-[15px] leading-[1.65] mb-5 sm:mb-8 font-normal max-w-md">
               Slide horizontally to witness how architectural planning and bespoke craftsmanship transform bare structures into serene living environments.
             </p>
 
@@ -82,10 +82,13 @@ export function BeforeAfterSection() {
           {/* Right Column: Interactive Slider Container */}
           <div data-animate="fade-up" className="lg:col-span-8 xl:col-span-8 relative">
             
-            {/* Subtitle Accent */}
-            <div className="flex justify-end mb-3 sm:mb-4 pr-2 select-none pointer-events-none">
-              <span className="text-xs font-sans uppercase tracking-[0.24em] text-[#1C6BAE] font-medium">
-                Concept to Execution — Interactive Comparison
+            {/* Interactive Cue Strip */}
+            <div className="flex items-center justify-between mb-2.5 sm:mb-3 px-1 select-none">
+              <span className="text-[10px] sm:text-[11px] font-sans uppercase tracking-[0.22em] text-[#1C6BAE] font-semibold">
+                Interactive Spatial Comparison
+              </span>
+              <span className="text-[10px] sm:text-[11px] font-sans text-[#D9E3EA]/80 tracking-wider">
+                Slide horizontally ↔
               </span>
             </div>
 
@@ -113,9 +116,10 @@ export function BeforeAfterSection() {
                   sizes="(max-width: 1024px) 100vw, 850px"
                   priority
                 />
-                {/* AFTER Pill Label */}
-                <div className="absolute bottom-4 sm:bottom-5 right-4 sm:right-5 z-10 px-3 py-1 rounded bg-[#111111]/90 backdrop-blur-md border border-white/20 text-[10px] font-sans font-semibold tracking-widest text-[#1C6BAE] uppercase">
-                  AFTER — ORGO RESIDENCE
+                {/* AFTER Pill Label with AAA Contrast */}
+                <div className="absolute bottom-3 sm:bottom-4 right-3 sm:right-4 z-10 inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded bg-[#111111]/95 backdrop-blur-md border border-white/20 text-[9px] sm:text-[10px] font-sans font-semibold tracking-wider text-white uppercase shadow-md">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#1C6BAE]" />
+                  <span>AFTER — ORGO RESIDENCE</span>
                 </div>
               </div>
 
@@ -132,9 +136,10 @@ export function BeforeAfterSection() {
                     className="object-cover object-center"
                     sizes="(max-width: 1024px) 100vw, 850px"
                   />
-                  {/* BEFORE Pill Label */}
-                  <div className="absolute bottom-4 sm:bottom-5 left-4 sm:left-5 z-10 px-3 py-1 rounded bg-[#111111]/90 backdrop-blur-md border border-white/20 text-[10px] font-sans font-semibold tracking-widest text-[#D9E3EA] uppercase">
-                    BEFORE — RAW SITE
+                  {/* BEFORE Pill Label with AAA Contrast */}
+                  <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 z-10 inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded bg-[#111111]/95 backdrop-blur-md border border-white/20 text-[9px] sm:text-[10px] font-sans font-semibold tracking-wider text-[#D9E3EA] uppercase shadow-md">
+                    <span className="w-1.5 h-1.5 rounded-full bg-white/40" />
+                    <span>BEFORE — RAW SITE</span>
                   </div>
                 </div>
               </div>

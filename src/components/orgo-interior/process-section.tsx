@@ -4,23 +4,23 @@ import { PROCESS_STEPS } from "./data";
 
 export function ProcessSection() {
   return (
-    <section id="process" className="py-16 sm:py-24 lg:py-28 bg-[#0B2A43] text-white border-t border-white/10 relative overflow-hidden">
+    <section id="process" className="py-14 sm:py-20 lg:py-24 bg-[#0B2A43] text-white border-t border-white/10 relative overflow-hidden">
       {/* Background Architectural Grid Accent */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
-        <div data-animate="fade-up" className="max-w-2xl mb-12 sm:mb-16">
-          <div className="flex items-center gap-2 mb-3">
-            <span className="h-px w-7 bg-[#1C6BAE]" />
-            <span className="text-[11px] font-sans uppercase tracking-[0.24em] text-[#1C6BAE] font-semibold">
-              The ORGO Process
+        <div data-animate="fade-up" className="max-w-2xl mb-10 sm:mb-14 lg:mb-16">
+          <div className="flex items-center gap-2 mb-2 sm:mb-3">
+            <span className="h-px w-6 sm:w-7 bg-[#1C6BAE]" />
+            <span className="text-[10px] sm:text-[11px] font-sans uppercase tracking-[0.22em] text-[#1C6BAE] font-semibold">
+              The ORGO Methodology
             </span>
           </div>
 
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-[42px] leading-tight text-white font-medium tracking-tight">
-            From Spatial Audit to Handover. <br />
+          <h2 className="font-display text-2xl sm:text-3xl lg:text-[40px] xl:text-[42px] leading-[1.14] text-white font-medium tracking-tight">
+            From Spatial Audit to Handover. <br className="hidden sm:inline" />
             Architectural Precision at Every Stage.
           </h2>
         </div>
@@ -39,8 +39,8 @@ export function ProcessSection() {
               }`}
             >
               {/* Top Row: Step Number & Connector Arrow */}
-              <div className="flex items-center justify-between mb-2 sm:mb-5">
-                <span className="font-display text-3xl sm:text-5xl font-semibold text-[#1C6BAE] group-hover:scale-105 transition-all duration-300 tracking-tight">
+              <div className="flex items-center justify-between mb-2.5 sm:mb-4">
+                <span className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium text-[#1C6BAE] group-hover:scale-105 transition-all duration-300 tracking-tight">
                   {item.step}
                 </span>
 
@@ -54,10 +54,10 @@ export function ProcessSection() {
               </div>
 
               {/* Title & Description */}
-              <h3 className="font-display text-sm sm:text-lg font-medium text-white group-hover:text-[#1C6BAE] transition-colors mb-1 sm:mb-2 tracking-wide">
+              <h3 className="font-display text-sm sm:text-base lg:text-lg font-medium text-white group-hover:text-[#1C6BAE] transition-colors mb-1 sm:mb-2 tracking-normal leading-snug">
                 {item.title}
               </h3>
-              <p className="font-sans text-[11px] sm:text-sm text-[#D9E3EA] font-normal leading-relaxed line-clamp-3 sm:line-clamp-none">
+              <p className="font-sans text-[11px] sm:text-xs lg:text-[13px] text-[#D9E3EA] font-normal leading-relaxed line-clamp-3 sm:line-clamp-none">
                 {item.description}
               </p>
             </div>

@@ -27,7 +27,7 @@ export function StatsBar() {
     },
     {
       value: "100%",
-      label: "Bespoke Architecture",
+      label: "Bespoke Joinery",
       icon: (
         <svg
           className="w-5 h-5 text-[#1C6BAE]"
@@ -48,8 +48,8 @@ export function StatsBar() {
       ),
     },
     {
-      value: "Turnkey",
-      label: "Execution & Oversight",
+      value: "15+",
+      label: "Years Atelier Craft",
       icon: (
         <svg
           className="w-5 h-5 text-[#1C6BAE]"
@@ -60,16 +60,14 @@ export function StatsBar() {
           strokeLinecap="round"
           strokeLinejoin="round"
         >
-          <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
-          <path d="M3 3v5h5" />
-          <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16" />
-          <path d="M16 21h5v-5" />
+          <circle cx="12" cy="12" r="9" />
+          <polyline points="12 7 12 12 15 15" />
         </svg>
       ),
     },
     {
-      value: "Chennai Studio",
-      label: "Serving South India",
+      value: "5.0★",
+      label: "Client Rating",
       icon: (
         <svg
           className="w-5 h-5 text-[#1C6BAE]"
@@ -80,8 +78,7 @@ export function StatsBar() {
           strokeLinecap="round"
           strokeLinejoin="round"
         >
-          <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
-          <circle cx="12" cy="10" r="3" />
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
         </svg>
       ),
     },

@@ -32,10 +32,10 @@ export function Footer() {
 
           {/* Col 2: Quick Links (1 col on mobile, 2 cols on desktop) */}
           <div className="col-span-1 lg:col-span-2">
-            <h4 className="font-display text-xs font-semibold text-white uppercase tracking-[0.2em] mb-4">
+            <h4 className="font-sans text-[11px] font-semibold text-white uppercase tracking-[0.2em] mb-4">
               Navigation
             </h4>
-            <ul className="space-y-2.5 text-xs sm:text-sm font-sans text-[#D9E3EA]">
+            <ul className="space-y-2.5 text-xs sm:text-[13px] font-sans text-[#D9E3EA]">
               <li>
                 <Link href="#hero" className="hover:text-[#1C6BAE] transition-colors inline-block py-0.5">
                   Home
@@ -66,10 +66,10 @@ export function Footer() {
 
           {/* Col 3: Our Disciplines (1 col on mobile, 2 cols on desktop) */}
           <div className="col-span-1 lg:col-span-2">
-            <h4 className="font-display text-xs font-semibold text-white uppercase tracking-[0.2em] mb-4">
+            <h4 className="font-sans text-[11px] font-semibold text-white uppercase tracking-[0.2em] mb-4">
               Disciplines
             </h4>
-            <ul className="space-y-2.5 text-xs sm:text-sm font-sans text-[#D9E3EA]">
+            <ul className="space-y-2.5 text-xs sm:text-[13px] font-sans text-[#D9E3EA]">
               <li>
                 <Link href="#services" className="hover:text-[#1C6BAE] transition-colors inline-block py-0.5">
                   Residential Architecture
@@ -100,10 +100,10 @@ export function Footer() {
 
           {/* Col 4: Contact Us (2 cols on mobile, 3 cols on desktop) */}
           <div className="col-span-2 lg:col-span-3">
-            <h4 className="font-display text-xs font-semibold text-white uppercase tracking-[0.2em] mb-4">
+            <h4 className="font-sans text-[11px] font-semibold text-white uppercase tracking-[0.2em] mb-4">
               Studio & Contact
             </h4>
-            <ul className="space-y-3 text-xs sm:text-sm font-sans text-[#D9E3EA]">
+            <ul className="space-y-3 text-xs sm:text-[13px] font-sans text-[#D9E3EA]">
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#1C6BAE] flex-shrink-0 mt-0.5" />
                 <span>

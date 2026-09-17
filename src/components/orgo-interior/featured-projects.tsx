@@ -68,7 +68,7 @@ export function FeaturedProjects({ onOpenConsultation }: FeaturedProjectsProps) 
 
             <button
               onClick={onOpenConsultation}
-              className="inline-flex items-center gap-1.5 sm:gap-2 px-4 py-2.5 sm:px-6 sm:py-3.5 rounded bg-[#1C6BAE] text-white text-[11px] sm:text-xs font-medium tracking-wider uppercase hover:bg-[#124B78] transition-colors shadow-sm active:scale-95 shrink-0"
+              className="inline-flex items-center gap-1.5 sm:gap-2 px-4 py-2.5 sm:px-6 sm:py-3.5 rounded bg-[#1C6BAE] text-white text-[11px] sm:text-xs font-sans font-medium tracking-[0.14em] uppercase hover:bg-[#124B78] transition-colors shadow-sm active:scale-95 shrink-0"
             >
               <span>Inquire About A Project</span>
               <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
@@ -86,9 +86,9 @@ export function FeaturedProjects({ onOpenConsultation }: FeaturedProjectsProps) 
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`relative text-[11px] sm:text-xs font-sans tracking-wider py-1.5 px-3 sm:py-2 sm:px-4 rounded transition-all duration-200 z-10 flex items-center gap-1.5 sm:gap-2 shrink-0 ${
+                className={`relative text-[10px] sm:text-[11px] font-sans uppercase font-medium tracking-[0.16em] py-1.5 px-3 sm:py-2 sm:px-4 rounded transition-all duration-200 z-10 flex items-center gap-1.5 sm:gap-2 shrink-0 ${
                   isActive
-                    ? "text-white font-medium shadow-sm"
+                    ? "text-white font-semibold shadow-sm"
                     : "text-[#5F6368] hover:text-[#111111]"
                 }`}
               >
@@ -283,13 +283,13 @@ function ProjectCard({ project, aspect, priority, onOpenConsultation }: ProjectC
         
         {/* Metadata Strip: Location & Area */}
         <div className="flex items-center gap-1.5 text-[10px] sm:text-xs font-sans text-[#5F6368] font-normal mb-1">
-          <span className="text-[#1C6BAE] font-semibold tracking-wider uppercase text-[9px] sm:text-[11px] truncate">
+          <span className="text-[#1C6BAE] font-semibold tracking-[0.16em] uppercase text-[9px] sm:text-[10px] truncate">
             {project.location || "Chennai Atelier"}
           </span>
           {project.area && (
             <>
               <span className="text-[#D9E3EA] hidden xs:inline">•</span>
-              <span className="hidden xs:inline truncate">{project.area}</span>
+              <span className="hidden xs:inline truncate text-[10px] sm:text-[11px] text-[#5F6368]">{project.area}</span>
             </>
           )}
         </div>
@@ -301,14 +301,14 @@ function ProjectCard({ project, aspect, priority, onOpenConsultation }: ProjectC
 
         {/* Scope / Spatial Description */}
         {project.scope && (
-          <p className="font-sans text-[10px] sm:text-xs text-[#5F6368] leading-relaxed mt-0.5 sm:mt-1 font-normal line-clamp-1 sm:line-clamp-2">
+          <p className="font-sans text-[11px] sm:text-xs text-[#5F6368] leading-relaxed mt-0.5 sm:mt-1 font-normal line-clamp-1 sm:line-clamp-2">
             {project.scope}
           </p>
         )}
 
         {/* Bottom Interactive Link */}
         <div className="mt-1.5 pt-1.5 sm:mt-2.5 sm:pt-2.5 border-t border-[#E5E7E9]/60 flex items-center justify-between text-[10px] sm:text-xs font-sans font-medium text-[#111111] group-hover:text-[#1C6BAE] transition-colors">
-          <span className="uppercase tracking-wider text-[9px] sm:text-[11px]">
+          <span className="uppercase tracking-[0.16em] text-[9px] sm:text-[10px]">
             <span className="sm:hidden">View Study</span>
             <span className="hidden sm:inline">Explore Project Study</span>
           </span>

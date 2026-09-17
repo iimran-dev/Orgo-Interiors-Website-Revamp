@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Logo } from "./logo";
 import { NAV_LINKS } from "./data";
-import { ArrowRight, Menu, X, Phone } from "lucide-react";
+import { ArrowRight, Menu, X, Phone, MapPin } from "lucide-react";
 
 interface NavbarProps {
   onOpenConsultation: () => void;
@@ -115,6 +115,11 @@ export function Navbar({ onOpenConsultation }: NavbarProps) {
               <Phone className="w-3.5 h-3.5 text-[#1C6BAE]" />
               <span>Direct Studio: +91 95855 44446</span>
             </a>
+
+            <div className="pt-1.5 flex items-center justify-center gap-1.5 text-center text-[10px] font-sans text-[#5F6368] uppercase tracking-[0.16em]">
+              <MapPin className="w-3 h-3 text-[#1C6BAE] flex-shrink-0" />
+              <span>Jonas The Downs Avenue, Chennai</span>
+            </div>
           </div>
         </div>
       )}
